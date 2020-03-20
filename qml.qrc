@@ -3,5 +3,6 @@
         <file>main.qml</file>
         <file>qtquickcontrols2.conf</file>
         <file>src/qml/MyMenuBar.qml</file>
+        <file>src/qml/ImageSource.qml</file>
     </qresource>
 </RCC>
