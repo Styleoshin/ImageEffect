@@ -8,6 +8,13 @@ ApplicationWindow {
     height: 480
     title: qsTr("Image Effect")
 
-    menuBar: MyMenuBar{}
+    menuBar: MyMenuBar{
+       id: menuBar
+       onChooseImage: imageSource.source = path
+    }
 
+    ImageSource {
+        id: imageSource
+        anchors.fill: parent
+    }
 }
