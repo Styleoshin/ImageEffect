@@ -12,7 +12,10 @@ MenuBar {
         }
         Action { text: qsTr("Save &As...") }
         MenuSeparator { }
-        Action { text: qsTr("&Quit") }
+        Action {
+            text: qsTr("&Quit")
+            onTriggered: Qt.quit()
+        }
     }
     Menu {
         title: qsTr("&Help")
