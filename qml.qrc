@@ -4,5 +4,6 @@
         <file>qtquickcontrols2.conf</file>
         <file>src/qml/MyMenuBar.qml</file>
         <file>src/qml/ImageSource.qml</file>
+        <file>src/qml/component/TextSliderProperty.qml</file>
     </qresource>
 </RCC>
