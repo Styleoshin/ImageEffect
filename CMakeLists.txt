@@ -32,12 +32,14 @@ if(ANDROID)
     add_library(ImageEffect SHARED
       main.cpp
       qml.qrc
+      ressouces.qrc
       ${TS_FILES}
     )
 else()
     add_executable(ImageEffect
       main.cpp
       qml.qrc
+      ressouces.qrc
       ${TS_FILES}
     )
 endif()
