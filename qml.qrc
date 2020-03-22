@@ -9,5 +9,6 @@
         <file>src/qml/component/TextColorProperty.qml</file>
         <file>src/qml/component/PannelTitle.qml</file>
         <file>src/qml/component/RectangleProperties.qml</file>
+        <file>src/qml/component/TextCheckboxProperty.qml</file>
     </qresource>
 </RCC>
