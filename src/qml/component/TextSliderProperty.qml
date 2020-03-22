@@ -7,7 +7,10 @@ Item {
     implicitWidth: 200
     implicitHeight: 35
     property string nameOption: ""
-    property int start_value: 50
+    property real start_value: 0.5
+    property int minimum_value: 0
+    property int maximum_value: 1
+
 
     Label {
         id: label
@@ -29,24 +32,24 @@ Item {
         anchors.right: spinBox.left
         anchors.rightMargin: 10
         anchors.verticalCenter: parent.verticalCenter
-        value: start_value / 100
+        value: start_value
         Material.accent: Material.Teal
 
-        onValueChanged: start_value = value * 100
+        onValueChanged:{ spinBox.value = value * 100 }
+
     }
 
     SpinBox {
         id: spinBox
         width: 120
         editable: true
-        from: 0
-        value: start_value
-        to: 100
+        from: minimum_value * 100
+        to: maximum_value * 100
+        value: start_value * 100
         stepSize: 1
         Material.accent: Material.Teal
 
         property int decimals: 2
-        property real realValue: value / 100
 
         anchors.right: parent.right
         anchors.rightMargin: 0
@@ -65,7 +68,6 @@ Item {
             return Number.fromLocaleString(locale, text) * 100
         }
 
-       onValueChanged: start_value = value
+       onValueChanged: slider.value = value / 100
     }
-
 }
