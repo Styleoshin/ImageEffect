@@ -1,2 +1,6 @@
-<!DOCTYPE RCC>
-<RCC version="1.0"/>
+<RCC>
+    <qresource prefix="/icons">
+        <file alias="hide_properties.png">ressource/icon/hide_properties.png</file>
+        <file alias="show_properties.png">ressource/icon/show_properties.png</file>
+    </qresource>
+</RCC>
