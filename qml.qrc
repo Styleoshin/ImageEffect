@@ -5,6 +5,7 @@
         <file>src/qml/MyMenuBar.qml</file>
         <file>src/qml/ImageSource.qml</file>
         <file>src/qml/component/TextSliderProperty.qml</file>
+        <file>src/qml/component/PannelGeneral.qml</file>
         <file>src/qml/component/TextColorProperty.qml</file>
         <file>src/qml/component/PannelTitle.qml</file>
         <file>src/qml/component/RectangleProperties.qml</file>
