@@ -15,6 +15,11 @@ Item {
         anchors.verticalCenter: parent.verticalCenter
         anchors.left: parent.left
         font.pointSize: 11
+
+        MouseArea {
+            anchors.fill: parent
+            onDoubleClicked: start_value = 50
+        }
     }
 
     Slider {
