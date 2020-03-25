@@ -26,7 +26,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(Qt5 COMPONENTS Core Quick LinguistTools REQUIRED)
 
-set(TS_FILES ImageEffect_fr_FR.ts)
+#set(TS_FILES ImageEffect_fr_FR.ts)
 
 if(ANDROID)
     add_library(ImageEffect SHARED
