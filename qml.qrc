@@ -17,5 +17,6 @@
         <file>src/qml/component/pannel/PannelLevelAdjust.qml</file>
         <file>src/qml/component/pannel/PannelShadow.qml</file>
         <file>src/qml/component/pannel/PannelTitle.qml</file>
+        <file>src/qml/component/pannel/PannelFastBlur.qml</file>
     </qresource>
 </RCC>
