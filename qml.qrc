@@ -12,5 +12,6 @@
         <file>src/qml/component/PannelShadow.qml</file>
         <file>src/qml/component/TextCheckboxProperty.qml</file>
         <file>src/qml/component/TextSlidercolorProperty.qml</file>
+        <file>src/qml/component/PannelColorizeHue.qml</file>
     </qresource>
 </RCC>
