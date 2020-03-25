@@ -18,5 +18,6 @@
         <file>src/qml/component/pannel/PannelShadow.qml</file>
         <file>src/qml/component/pannel/PannelTitle.qml</file>
         <file>src/qml/component/pannel/PannelFastBlur.qml</file>
+        <file>src/qml/component/pannel/PannelGaussianBlur.qml</file>
     </qresource>
 </RCC>
