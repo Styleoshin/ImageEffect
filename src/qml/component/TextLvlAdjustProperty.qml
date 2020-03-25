@@ -34,21 +34,24 @@ Item {
 
         SpinBoxFloat{
             id: sb1
+            start_value: 1
             Layout.preferredWidth: 50
             up.indicator: {}
             down.indicator: {}
         }
 
         SpinBoxFloat{
-            Layout.preferredWidth: 50
             id: sb2
+            start_value: 1
+            Layout.preferredWidth: 50
             up.indicator: {}
             down.indicator: {}
         }
 
         SpinBoxFloat{
-            Layout.preferredWidth: 50
             id: sb3
+            start_value: 1
+            Layout.preferredWidth: 50
             up.indicator: {}
             down.indicator: {}
         }
