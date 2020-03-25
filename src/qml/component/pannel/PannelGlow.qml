@@ -2,6 +2,7 @@ import QtQuick 2.0
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.14
 import QtQuick.Controls.Material 2.12
+import ".."
 
 Rectangle {
     id: rectMain
@@ -13,7 +14,7 @@ Rectangle {
         id: rectTitle
         width: parent.width
         height: 35
-        title: qsTr("Colorize and Hue")
+        title: qsTr("Glow")
 
         anchors.top: parent.top
         anchors.topMargin: 0
@@ -26,38 +27,29 @@ Rectangle {
 
     RectangleProperties {
         id : rectProperty
-        implicitHeight: 180
+        implicitHeight: 130
         anchors.top: rectTitle.bottom
 
         ColumnLayout {
             id: layout
             anchors.fill: parent
 
-            ComboBox {
-                Material.accent: Material.Teal
-
-                model: [ qsTr("Colorize"), qsTr("Hue Saturation") ]
-                Layout.leftMargin: 15
-                Layout.preferredWidth: 160
-                Layout.preferredHeight: 35
-            }
-
-            TextSlidercolorProperty {
-                nameOption: qsTr("Hue:")
+            TextSliderProperty {
+                nameOption: qsTr("Radius:")
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
                 Layout.fillWidth: true
             }
 
             TextSliderProperty {
-                nameOption: qsTr("Saturation:")
+                nameOption: qsTr("Sample:")
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
                 Layout.fillWidth: true
             }
 
-            TextSliderProperty {
-                nameOption: qsTr("Lightness:")
+            TextColorProperty{
+                nameOption: qsTr("Color:")
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
                 Layout.fillWidth: true

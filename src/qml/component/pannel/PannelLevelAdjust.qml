@@ -2,6 +2,7 @@ import QtQuick 2.0
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.14
 import QtQuick.Controls.Material 2.12
+import ".."
 
 Rectangle {
     id: rectMain
@@ -13,7 +14,7 @@ Rectangle {
         id: rectTitle
         width: parent.width
         height: 35
-        title: qsTr("Glow")
+        title: qsTr("Level Adjust")
 
         anchors.top: parent.top
         anchors.topMargin: 0
@@ -26,29 +27,43 @@ Rectangle {
 
     RectangleProperties {
         id : rectProperty
-        implicitHeight: 130
+     //   implicitHeight: 200
         anchors.top: rectTitle.bottom
 
         ColumnLayout {
             id: layout
             anchors.fill: parent
 
-            TextSliderProperty {
-                nameOption: qsTr("Radius:")
-                Layout.leftMargin: 10
-                Layout.rightMargin: 10
-                Layout.fillWidth: true
-            }
-
-            TextSliderProperty {
-                nameOption: qsTr("Sample:")
+            TextLvlAdjustProperty {
+                nameOption: qsTr("Gamma:")
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
                 Layout.fillWidth: true
             }
 
             TextColorProperty{
-                nameOption: qsTr("Color:")
+                nameOption: qsTr("Minimum input:")
+                Layout.leftMargin: 10
+                Layout.rightMargin: 10
+                Layout.fillWidth: true
+            }
+
+            TextColorProperty{
+                nameOption: qsTr("Maximum input:")
+                Layout.leftMargin: 10
+                Layout.rightMargin: 10
+                Layout.fillWidth: true
+            }
+
+            TextColorProperty{
+                nameOption: qsTr("Minimum output:")
+                Layout.leftMargin: 10
+                Layout.rightMargin: 10
+                Layout.fillWidth: true
+            }
+
+            TextColorProperty{
+                nameOption: qsTr("Maximum output:")
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
                 Layout.fillWidth: true

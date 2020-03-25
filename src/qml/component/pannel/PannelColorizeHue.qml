@@ -2,6 +2,7 @@ import QtQuick 2.0
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.14
 import QtQuick.Controls.Material 2.12
+import ".."
 
 Rectangle {
     id: rectMain
@@ -13,7 +14,7 @@ Rectangle {
         id: rectTitle
         width: parent.width
         height: 35
-        title: qsTr("Shadow")
+        title: qsTr("Colorize and Hue")
 
         anchors.top: parent.top
         anchors.topMargin: 0
@@ -26,7 +27,7 @@ Rectangle {
 
     RectangleProperties {
         id : rectProperty
-        implicitHeight: 330
+        implicitHeight: 180
         anchors.top: rectTitle.bottom
 
         ColumnLayout {
@@ -36,57 +37,28 @@ Rectangle {
             ComboBox {
                 Material.accent: Material.Teal
 
-                model: [ qsTr("Drop shadow"), qsTr("Inner shadow") ]
+                model: [ qsTr("Colorize"), qsTr("Hue Saturation") ]
                 Layout.leftMargin: 15
-                Layout.preferredWidth: 150
+                Layout.preferredWidth: 160
                 Layout.preferredHeight: 35
             }
 
-            TextSliderProperty {
-                nameOption: qsTr("Radius:")
+            TextSlidercolorProperty {
+                nameOption: qsTr("Hue:")
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
                 Layout.fillWidth: true
             }
 
             TextSliderProperty {
-                nameOption: qsTr("Sample:")
+                nameOption: qsTr("Saturation:")
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
                 Layout.fillWidth: true
             }
 
             TextSliderProperty {
-                nameOption: qsTr("Horizental offset:")
-                Layout.leftMargin: 10
-                Layout.rightMargin: 10
-                Layout.fillWidth: true
-
-            }
-
-            TextSliderProperty {
-                nameOption: qsTr("Vertical offset:")
-                Layout.leftMargin: 10
-                Layout.rightMargin: 10
-                Layout.fillWidth: true
-            }
-
-            TextSliderProperty {
-                nameOption: qsTr("Spread:")
-                Layout.leftMargin: 10
-                Layout.rightMargin: 10
-                Layout.fillWidth: true
-            }
-
-            TextColorProperty{
-                nameOption: qsTr("Color:")
-                Layout.leftMargin: 10
-                Layout.rightMargin: 10
-                Layout.fillWidth: true
-            }
-
-            TextCheckboxProperty {
-                nameOption: qsTr("Transparent border:")
+                nameOption: qsTr("Lightness:")
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
                 Layout.fillWidth: true

@@ -5,17 +5,17 @@
         <file>src/qml/MyMenuBar.qml</file>
         <file>src/qml/ImageSource.qml</file>
         <file>src/qml/component/TextSliderProperty.qml</file>
-        <file>src/qml/component/PannelGeneral.qml</file>
         <file>src/qml/component/TextColorProperty.qml</file>
-        <file>src/qml/component/PannelTitle.qml</file>
         <file>src/qml/component/RectangleProperties.qml</file>
-        <file>src/qml/component/PannelShadow.qml</file>
         <file>src/qml/component/TextCheckboxProperty.qml</file>
         <file>src/qml/component/TextSlidercolorProperty.qml</file>
-        <file>src/qml/component/PannelColorizeHue.qml</file>
-        <file>src/qml/component/PannelGlow.qml</file>
-        <file>src/qml/component/PannelLevelAdjust.qml</file>
         <file>src/qml/component/TextLvlAdjustProperty.qml</file>
         <file>src/qml/component/SpinBoxFloat.qml</file>
+        <file>src/qml/component/pannel/PannelColorizeHue.qml</file>
+        <file>src/qml/component/pannel/PannelGeneral.qml</file>
+        <file>src/qml/component/pannel/PannelGlow.qml</file>
+        <file>src/qml/component/pannel/PannelLevelAdjust.qml</file>
+        <file>src/qml/component/pannel/PannelShadow.qml</file>
+        <file>src/qml/component/pannel/PannelTitle.qml</file>
     </qresource>
 </RCC>
