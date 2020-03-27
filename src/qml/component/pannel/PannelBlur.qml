@@ -34,6 +34,7 @@ Rectangle {
 
         ColumnLayout {
             id: layout
+            spacing: 0
             anchors.fill: parent
 
             ComboBox {
