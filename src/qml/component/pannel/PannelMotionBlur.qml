@@ -14,7 +14,7 @@ Rectangle {
         id: rectTitle
         width: parent.width
         height: 35
-        title: qsTr("Blur")
+        title: qsTr("Motion Blur")
 
         anchors.top: parent.top
         anchors.topMargin: 0
