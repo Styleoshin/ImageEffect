@@ -27,7 +27,6 @@ Rectangle {
 
     RectangleProperties {
         id : rectProperty
-     //   implicitHeight: 200
         anchors.top: rectTitle.bottom
 
         ColumnLayout {
