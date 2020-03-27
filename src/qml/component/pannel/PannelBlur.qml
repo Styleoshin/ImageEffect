@@ -20,6 +20,7 @@ Rectangle {
         anchors.topMargin: 0
 
         onClickHideProperties: {
+            layout.clip = true
             cbBlur.state = ( cbBlur.state == "hide" )? "" : "hide"
             rectProperty.state = ( rectProperty.state == "hideProperties" )? "" : "hideProperties"
         }
@@ -44,6 +45,7 @@ Rectangle {
 
                 Layout.preferredHeight: 35
                 Layout.leftMargin: 15
+
                 onActivated: gaussianBlur.state = (index)? "showGaussianBlur" : ""
                 states: State {
                     name: "hide"
