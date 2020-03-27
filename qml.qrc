@@ -23,5 +23,6 @@
         <file>src/qml/component/pannel/PannelDirectionalBlur.qml</file>
         <file>src/qml/component/pannel/PannelRadialBlur.qml</file>
         <file>src/qml/component/pannel/PannelZoomBlur.qml</file>
+        <file>src/qml/component/pannel/PannelMotionBlur.qml</file>
     </qresource>
 </RCC>
