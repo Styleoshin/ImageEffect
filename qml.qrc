@@ -11,7 +11,7 @@
         <file>src/qml/component/TextSlidercolorProperty.qml</file>
         <file>src/qml/component/TextLvlAdjustProperty.qml</file>
         <file>src/qml/component/SpinBoxFloat.qml</file>
-        <file>src/qml/component/pannel/PannelColorizeHue.qml</file>
+        <file>src/qml/component/pannel/PannelColor.qml</file>
         <file>src/qml/component/pannel/PannelGeneral.qml</file>
         <file>src/qml/component/pannel/PannelGlow.qml</file>
         <file>src/qml/component/pannel/PannelLevelAdjust.qml</file>

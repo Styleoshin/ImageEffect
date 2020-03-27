@@ -14,7 +14,7 @@ Rectangle {
         id: rectTitle
         width: parent.width
         height: 35
-        title: qsTr("Colorize and Hue")
+        title: qsTr("Color")
 
         anchors.top: parent.top
         anchors.topMargin: 0
