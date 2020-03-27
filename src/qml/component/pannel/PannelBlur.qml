@@ -21,7 +21,6 @@ Rectangle {
 
         onClickHideProperties: {
             layout.clip = true
-            cbBlur.state = ( cbBlur.state == "hide" )? "" : "hide"
             rectProperty.state = ( rectProperty.state == "hideProperties" )? "" : "hideProperties"
         }
     }
@@ -47,13 +46,6 @@ Rectangle {
                 Layout.leftMargin: 15
 
                 onActivated: gaussianBlur.state = (index)? "showGaussianBlur" : ""
-                states: State {
-                    name: "hide"
-                    PropertyChanges { target: cbBlur; Layout.preferredHeight:0; clip:true }
-                }
-                transitions: Transition {
-                    NumberAnimation { property: "Layout.preferredHeight"; easing.type: Easing.InOutQuad }
-                }
             }
 
             PannelFastBlur {
