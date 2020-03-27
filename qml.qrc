@@ -20,5 +20,6 @@
         <file>src/qml/component/pannel/PannelFastBlur.qml</file>
         <file>src/qml/component/pannel/PannelGaussianBlur.qml</file>
         <file>src/qml/component/pannel/PannelBlur.qml</file>
+        <file>src/qml/component/pannel/PannelZoomBlur.qml</file>
     </qresource>
 </RCC>
