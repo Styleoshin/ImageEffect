@@ -37,6 +37,7 @@ Item {
 
         anchors.right: spinBox.left
         anchors.verticalCenter: parent.verticalCenter
+
         onValueChanged: spinBox.value = value * 100
     }
 
@@ -52,19 +53,6 @@ Item {
         anchors.right: parent.right
         anchors.rightMargin: 0
         anchors.verticalCenter: parent.verticalCenter
-
-        validator: DoubleValidator {
-            bottom: Math.min(spinBox.from, spinBox.to)
-            top:  Math.max(spinBox.from, spinBox.to)
-        }
-
-        textFromValue: function(value, locale) {
-            return Number(value / 100).toLocaleString(locale, 'f', spinBox.decimals)
-        }
-
-        valueFromText: function(text, locale) {
-            return Number.fromLocaleString(locale, text) * 100
-        }
 
         onValueChanged: slider.value = value / 100
     }
