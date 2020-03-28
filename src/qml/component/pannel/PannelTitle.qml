@@ -12,12 +12,13 @@ Rectangle {
     Text {
         color: "#ffffff"
         text: title
+        font.family: "Calibri"
         anchors.verticalCenter: parent.verticalCenter
         anchors.left: parent.left
         anchors.leftMargin: 40
         font.italic: false
         font.bold: true
-        font.pointSize: 16
+        font.pointSize: 14
     }
 
     Image {
