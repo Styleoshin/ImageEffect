@@ -9,14 +9,14 @@ SpinBox {
     from: minimum_value * 100
     to: maximum_value * 100
     value: start_value * 100
-    stepSize: step_size
+    stepSize: step_size * 100
     Material.accent: Material.Teal
 
     property int decimals: 2
-    property real start_value: 0.5
     property int minimum_value: 0
     property int maximum_value: 1
-    property int step_size: 1
+    property real start_value: 0.5
+    property real step_size: 1
 
     validator: DoubleValidator {
         bottom: Math.min(spinBox.from, spinBox.to)

@@ -7,10 +7,10 @@ Item {
     implicitWidth: 200
     implicitHeight: 35
     property string nameOption: ""
-    property real start_value: 0.5
     property int minimum_value: 0
     property int maximum_value: 1
-
+    property real start_value: 0.5
+    property real step_size: 0.01
 
     Label {
         id: label
@@ -18,41 +18,36 @@ Item {
         anchors.verticalCenter: parent.verticalCenter
         anchors.left: parent.left
         font.pointSize: 9
-        font.pointSize: 11
 
         MouseArea {
             anchors.fill: parent
-            onDoubleClicked: start_value = 50
+            onDoubleClicked: spinBox.value = ((element.maximum_value + element.minimum_value) / 2) * 100
         }
     }
 
     Slider {
         id: slider
         width: 140
-        width: 150
         height: 20
-        anchors.right: spinBox.left
-        anchors.verticalCenter: parent.verticalCenter
-        value: start_value
+        from: element.minimum_value
+        to: element.maximum_value
+        value: element.start_value
+        stepSize: element.step_size
         Material.accent: Material.Teal
 
-        onValueChanged:{ spinBox.value = value * 100 }
-
+        anchors.right: spinBox.left
+        anchors.verticalCenter: parent.verticalCenter
+        onValueChanged: spinBox.value = value * 100
     }
 
     SpinBoxFloat {
-    SpinBox {
         id: spinBox
         width: 130
-        width: 120
         editable: true
-        from: minimum_value * 100
-        to: maximum_value * 100
-        value: start_value * 100
-        stepSize: 1
-        Material.accent: Material.Teal
-
-        property int decimals: 2
+        minimum_value: element.minimum_value
+        maximum_value: element.maximum_value
+        start_value: element.start_value
+        step_size: element.step_size
 
         anchors.right: parent.right
         anchors.rightMargin: 0
@@ -71,6 +66,6 @@ Item {
             return Number.fromLocaleString(locale, text) * 100
         }
 
-       onValueChanged: slider.value = value / 100
+        onValueChanged: slider.value = value / 100
     }
 }
