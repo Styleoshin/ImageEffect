@@ -28,10 +28,10 @@ Item {
 
     Slider {
         id: slider
+        width: 140
         width: 150
         height: 20
         anchors.right: spinBox.left
-        anchors.rightMargin: 10
         anchors.verticalCenter: parent.verticalCenter
         value: start_value
         Material.accent: Material.Teal
