@@ -7,7 +7,7 @@ Item {
     implicitWidth: 200
     implicitHeight: 35
     property string nameOption: ""
-    signal checked()
+    signal checkedState(bool state)
 
     Label {
         id: label
@@ -23,7 +23,6 @@ Item {
 
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.verticalCenter: parent.verticalCenter
-
-        onCheckedChanged: checked()
+        onCheckedChanged: checkedState( (checkState === Qt.Checked)? true:false )
     }
 }
