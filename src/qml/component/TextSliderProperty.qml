@@ -40,8 +40,10 @@ Item {
 
     }
 
+    SpinBoxFloat {
     SpinBox {
         id: spinBox
+        width: 130
         width: 120
         editable: true
         from: minimum_value * 100
