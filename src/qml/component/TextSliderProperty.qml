@@ -17,6 +17,7 @@ Item {
         text: nameOption
         anchors.verticalCenter: parent.verticalCenter
         anchors.left: parent.left
+        font.pointSize: 9
         font.pointSize: 11
 
         MouseArea {
