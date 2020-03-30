@@ -10,8 +10,12 @@ RectangleProperties {
         id: layout
         anchors.fill: parent
 
-        TextSliderProperty {
+        TextDialProperty {
             nameOption: qsTr("Angle:")
+            minimum_value: -180
+            maximum_value: 180
+            step_size: 1
+            start_value: 0
             Layout.leftMargin: 10
             Layout.rightMargin: 10
             Layout.fillWidth: true
