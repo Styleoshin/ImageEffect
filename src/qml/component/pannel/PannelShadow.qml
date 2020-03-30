@@ -52,7 +52,7 @@ Rectangle {
             }
 
             TextSliderProperty {
-                nameOption: qsTr("Sample:")
+                nameOption: qsTr("Samples:")
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
                 Layout.fillWidth: true
