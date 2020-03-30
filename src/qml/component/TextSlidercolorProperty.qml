@@ -7,7 +7,10 @@ Item {
     implicitWidth: 200
     implicitHeight: 35
     property string nameOption: ""
-    property int start_value: 50
+    property int minimum_value: 0
+    property int maximum_value: 1
+    property real start_value: 0.5
+    property real step_size: 0.01
 
     Label {
         id: label
@@ -18,24 +21,24 @@ Item {
 
         MouseArea {
             anchors.fill: parent
-            onDoubleClicked: start_value = 50
+            onDoubleClicked: start_value = start_value
         }
     }
 
     Slider {
         id: slider
-        width: 150
+        width: 140
         height: 10
-        anchors.right: spinBox.left
-        anchors.rightMargin: 10
-        anchors.verticalCenter: parent.verticalCenter
-        value: start_value / 100
+        from: element.minimum_value
+        to: element.maximum_value
+        value: element.start_value
+        stepSize: element.step_size
         Material.accent: Material.Teal
 
-        onValueChanged:
-        {
-            start_value = value * 100
-        }
+        anchors.right: spinBox.left
+        anchors.verticalCenter: parent.verticalCenter
+
+        onValueChanged: spinBox.value = value * 100
 
         background: Image {
             source: "qrc:/image/slider_color.png"
@@ -68,36 +71,19 @@ Item {
         }
     }
 
-    SpinBox {
+    SpinBoxFloat {
         id: spinBox
-        width: 120
+        width: 130
         editable: true
-        from: 0
-        value: start_value
-        to: 100
-        stepSize: 1
-        Material.accent: Material.Teal
-
-        property int decimals: 2
-        property real realValue: value / 100
+        minimum_value: element.minimum_value
+        maximum_value: element.maximum_value
+        start_value: element.start_value
+        step_size: element.step_size
 
         anchors.right: parent.right
         anchors.rightMargin: 0
         anchors.verticalCenter: parent.verticalCenter
 
-        validator: DoubleValidator {
-            bottom: Math.min(spinBox.from, spinBox.to)
-            top:  Math.max(spinBox.from, spinBox.to)
-        }
-
-        textFromValue: function(value, locale) {
-            return Number(value / 100).toLocaleString(locale, 'f', spinBox.decimals)
-        }
-
-        valueFromText: function(text, locale) {
-            return Number.fromLocaleString(locale, text) * 100
-        }
-
-        onValueChanged: start_value = value
+        onValueChanged: slider.value = value / 100
     }
 }
