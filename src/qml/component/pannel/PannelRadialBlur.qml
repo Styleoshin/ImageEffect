@@ -25,7 +25,7 @@ RectangleProperties {
             nameOption: qsTr("Samples:")
             minimum_value: 0
             maximum_value: 1
-            step_size: 1
+            step_size: 0.01
             start_value: 0
             Layout.leftMargin: 10
             Layout.rightMargin: 10
