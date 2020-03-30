@@ -10,7 +10,7 @@ RectangleProperties {
         id: layout
         anchors.fill: parent
 
-        TextSliderProperty {
+        TextDialProperty {
             nameOption: qsTr("Radius:")
             Layout.leftMargin: 10
             Layout.rightMargin: 10
