@@ -12,6 +12,10 @@ RectangleProperties {
 
         TextDialProperty {
             nameOption: qsTr("Angle:")
+            minimum_value: 0
+            maximum_value: 360
+            step_size: 1
+            start_value: 0
             Layout.leftMargin: 10
             Layout.rightMargin: 10
             Layout.fillWidth: true
@@ -19,6 +23,10 @@ RectangleProperties {
 
         TextSliderProperty {
             nameOption: qsTr("Samples:")
+            minimum_value: 0
+            maximum_value: 1
+            step_size: 1
+            start_value: 0
             Layout.leftMargin: 10
             Layout.rightMargin: 10
             Layout.fillWidth: true
@@ -26,6 +34,7 @@ RectangleProperties {
 
         TextSliderProperty {
             nameOption: qsTr("Horizental offset:")
+            start_value: 0
             Layout.leftMargin: 10
             Layout.rightMargin: 10
             Layout.fillWidth: true
@@ -33,6 +42,7 @@ RectangleProperties {
 
         TextSliderProperty {
             nameOption: qsTr("Vertical offset:")
+            start_value: 0
             Layout.leftMargin: 10
             Layout.rightMargin: 10
             Layout.fillWidth: true
