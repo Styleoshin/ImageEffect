@@ -27,7 +27,7 @@ Rectangle {
 
     RectangleProperties {
         id : rectProperty
-        implicitHeight: 130
+        implicitHeight: 170
         anchors.top: rectTitle.bottom
         anchors.topMargin: 1
 
@@ -44,6 +44,17 @@ Rectangle {
 
             TextSliderProperty {
                 nameOption: qsTr("Samples:")
+                Layout.leftMargin: 10
+                Layout.rightMargin: 10
+                Layout.fillWidth: true
+            }
+
+            TextSliderProperty {
+                nameOption: qsTr("Spread:")
+                minimum_value: 0
+                maximum_value: 1
+                step_size: 0.01
+                start_value: 0.5
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
                 Layout.fillWidth: true
