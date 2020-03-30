@@ -21,7 +21,7 @@ Item {
 
         MouseArea {
             anchors.fill: parent
-            onDoubleClicked: spinBox.value = ((element.maximum_value + element.minimum_value) / 2) * 100
+            onDoubleClicked: spinBox.value = element.start_value * 100
         }
     }
 
@@ -74,10 +74,10 @@ Item {
         id:dlDial
         Dial {
             id: dial
-            from: -180
-            to: 180
-            stepSize: 1
-            value: 0
+            from: element.minimum_value
+            to:  element.maximum_value
+            stepSize: element.step_size
+            value: element.start_value
             Material.accent: Material.Teal
 
             onMoved: spinBox.value = value * 100
