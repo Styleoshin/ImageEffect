@@ -35,8 +35,7 @@ Item {
             }
         }
 
-        anchors.horizontalCenter: parent.horizontalCenter
-        anchors.verticalCenter: parent.verticalCenter
+        anchors.centerIn: parent
 
         MouseArea {
             anchors.fill: parent
