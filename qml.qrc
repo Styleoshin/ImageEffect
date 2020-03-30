@@ -26,5 +26,6 @@
         <file>src/qml/component/pannel/PannelMotionBlur.qml</file>
         <file>src/qml/component/pannel/PannelColorize.qml</file>
         <file>src/qml/component/pannel/PannelHueSaturation.qml</file>
+        <file>src/qml/component/TextDialProperty.qml</file>
     </qresource>
 </RCC>
