@@ -43,6 +43,8 @@ Rectangle {
                 Layout.leftMargin: 15
                 Layout.preferredWidth: 160
                 Layout.preferredHeight: 35
+                onActivated: hueSaturation.state = (index)? "showHueSaturation" : ""
+
             }
 
             PannelColorize {
@@ -51,9 +53,15 @@ Rectangle {
             }
 
             PannelHueSaturation {
-                id: huesatiration
+                id: hueSaturation
                 clip: true
                 Layout.preferredHeight: 0
+
+                states: State {
+                    name: "showHueSaturation"
+                    PropertyChanges { target: colorize; clip:true; Layout.preferredHeight:0 }
+                    PropertyChanges { target: hueSaturation; clip:false; Layout.preferredHeight:120 }
+                }
             }
         }
     }
