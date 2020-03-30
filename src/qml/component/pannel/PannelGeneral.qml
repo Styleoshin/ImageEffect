@@ -34,6 +34,10 @@ Rectangle {
 
             TextSliderProperty {
                 nameOption: qsTr("Brightness:")
+                minimum_value: -1
+                maximum_value: 1
+                step_size: 0.01
+                start_value: 0
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
                 Layout.fillWidth: true
@@ -41,6 +45,10 @@ Rectangle {
 
             TextSliderProperty {
                 nameOption: qsTr("Contrast:")
+                minimum_value: -1
+                maximum_value: 1
+                step_size: 0.01
+                start_value: 0
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
                 Layout.fillWidth: true
@@ -48,6 +56,10 @@ Rectangle {
 
             TextSliderProperty {
                 nameOption: qsTr("Desaturate:")
+                minimum_value: 0
+                maximum_value: 1
+                step_size: 0.01
+                start_value: 0
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
                 Layout.fillWidth: true
@@ -56,6 +68,10 @@ Rectangle {
 
             TextSliderProperty {
                 nameOption: qsTr("Gamma adjust:")
+                minimum_value: 0
+                maximum_value: 20
+                step_size: 0.01
+                start_value: 1
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
                 Layout.fillWidth: true
