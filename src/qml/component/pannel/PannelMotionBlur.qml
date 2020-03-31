@@ -38,7 +38,7 @@ Rectangle {
             anchors.fill: parent
 
             ComboBox {
-                id: cbBlur
+                id: cbMotionBlur
                 model: [ qsTr("Directional"), qsTr("Radial"), qsTr("Zoom") ]
                 Material.accent: Material.Teal
 
