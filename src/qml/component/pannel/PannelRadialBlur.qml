@@ -21,11 +21,11 @@ RectangleProperties {
             Layout.fillWidth: true
         }
 
-        TextSliderProperty {
+        TextSpinBoxProperty {
             nameOption: qsTr("Samples:")
             minimum_value: 0
-            maximum_value: 1
-            step_size: 0.01
+            maximum_value: 10000
+            step_size: 100
             start_value: 0
             Layout.leftMargin: 10
             Layout.rightMargin: 10
