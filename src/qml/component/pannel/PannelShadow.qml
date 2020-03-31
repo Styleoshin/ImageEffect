@@ -27,7 +27,7 @@ Rectangle {
 
     RectangleProperties {
         id : rectProperty
-        implicitHeight: 330
+        implicitHeight: 340
         anchors.top: rectTitle.bottom
         anchors.topMargin: 1
 
@@ -36,66 +36,33 @@ Rectangle {
             anchors.fill: parent
 
             ComboBox {
+                id: cbShadow
+                model: [ qsTr("Drop shadow"), qsTr("Inner shadow") ]
                 Material.accent: Material.Teal
 
-                model: [ qsTr("Drop shadow"), qsTr("Inner shadow") ]
-                Layout.leftMargin: 15
                 Layout.preferredWidth: 150
                 Layout.preferredHeight: 35
+                Layout.leftMargin: 15
+
+                onActivated: innerShadow.state = (index)? "showInnerShadow" : ""
             }
 
-            TextSliderProperty {
-                nameOption: qsTr("Radius:")
-                Layout.leftMargin: 10
-                Layout.rightMargin: 10
-                Layout.fillWidth: true
+            PannelDropShadow {
+                id: dropShadow
+                Layout.preferredHeight:270
             }
 
-            TextSliderProperty {
-                nameOption: qsTr("Samples:")
-                Layout.leftMargin: 10
-                Layout.rightMargin: 10
-                Layout.fillWidth: true
-            }
+            PannelInnerShadow {
+                id: innerShadow
+                clip: true
+                Layout.preferredHeight: 0
 
-            TextSliderProperty {
-                nameOption: qsTr("Horizental offset:")
-                Layout.leftMargin: 10
-                Layout.rightMargin: 10
-                Layout.fillWidth: true
-
-            }
-
-            TextSliderProperty {
-                nameOption: qsTr("Vertical offset:")
-                Layout.leftMargin: 10
-                Layout.rightMargin: 10
-                Layout.fillWidth: true
-            }
-
-            TextSliderProperty {
-                nameOption: qsTr("Spread:")
-                minimum_value: 0
-                maximum_value: 1
-                step_size: 0.01
-                start_value: 0
-                Layout.leftMargin: 10
-                Layout.rightMargin: 10
-                Layout.fillWidth: true
-            }
-
-            TextColorProperty{
-                nameOption: qsTr("Color:")
-                Layout.leftMargin: 10
-                Layout.rightMargin: 10
-                Layout.fillWidth: true
-            }
-
-            TextCheckboxProperty {
-                nameOption: qsTr("Transparent border:")
-                Layout.leftMargin: 10
-                Layout.rightMargin: 10
-                Layout.fillWidth: true
+                states: State {
+                    name: "showInnerShadow"
+                    PropertyChanges { target: dropShadow; clip:true; Layout.preferredHeight:0 }
+                    PropertyChanges { target: innerShadow; clip:false; Layout.preferredHeight:210 }
+                    PropertyChanges { target: rectProperty; height:370 }
+                }
             }
         }
     }
