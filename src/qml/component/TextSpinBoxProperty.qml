@@ -36,8 +36,5 @@ Item {
         maximum_value: element.maximum_value
         start_value: element.start_value
         step_size: element.step_size
-
-
-        onValueChanged: slider.value = value / 100
     }
 }
