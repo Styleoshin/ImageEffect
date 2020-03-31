@@ -33,6 +33,7 @@ Rectangle {
 
         ColumnLayout {
             id: layout
+            spacing: 0
             anchors.fill: parent
 
             ComboBox {
@@ -49,7 +50,7 @@ Rectangle {
 
             PannelDropShadow {
                 id: dropShadow
-                Layout.preferredHeight:270
+                Layout.preferredHeight: 270
             }
 
             PannelInnerShadow {
@@ -60,8 +61,8 @@ Rectangle {
                 states: State {
                     name: "showInnerShadow"
                     PropertyChanges { target: dropShadow; clip:true; Layout.preferredHeight:0 }
-                    PropertyChanges { target: innerShadow; clip:false; Layout.preferredHeight:210 }
-                    PropertyChanges { target: rectProperty; height:370 }
+                    PropertyChanges { target: innerShadow; clip:false; Layout.preferredHeight:270 }
+                    PropertyChanges { target: rectProperty; height:340 }
                 }
             }
         }
