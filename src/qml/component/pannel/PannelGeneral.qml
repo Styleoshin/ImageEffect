@@ -67,10 +67,10 @@ Rectangle {
             }
 
             TextSliderProperty {
-                nameOption: qsTr("Gamma adjust:")
+                nameOption: qsTr("Luminance:")
                 minimum_value: 0
-                maximum_value: 20
-                step_size: 0.01
+                maximum_value: 100
+                step_size: 1
                 start_value: 1
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
