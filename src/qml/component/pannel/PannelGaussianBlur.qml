@@ -10,22 +10,34 @@ RectangleProperties {
         id: layout
         anchors.fill: parent
 
-        TextSliderProperty {
+        TextSpinBoxProperty {
             nameOption: qsTr("Radius:")
+            minimum_value: 0
+            maximum_value: 10000
+            step_size: 100
+            start_value: 0
             Layout.leftMargin: 10
             Layout.rightMargin: 10
             Layout.fillWidth: true
         }
 
-        TextSliderProperty {
+        TextSpinBoxProperty {
             nameOption: qsTr("Samples:")
+            minimum_value: 0
+            maximum_value: 10000
+            step_size: 100
+            start_value: 9
             Layout.leftMargin: 10
             Layout.rightMargin: 10
             Layout.fillWidth: true
         }
 
-        TextSliderProperty {
+        TextSpinBoxProperty {
             nameOption: qsTr("Deviation:")
+            minimum_value: 0
+            maximum_value: 10000
+            step_size: 100
+            start_value: 0
             Layout.leftMargin: 10
             Layout.rightMargin: 10
             Layout.fillWidth: true
