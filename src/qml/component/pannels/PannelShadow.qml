@@ -31,7 +31,7 @@ Rectangle {
         id : rectProperty
         implicitHeight: 340
         anchors.top: rectTitle.bottom
-        anchors.topMargin: 5
+        anchors.topMargin: 1
 
         ColumnLayout {
             id: layout

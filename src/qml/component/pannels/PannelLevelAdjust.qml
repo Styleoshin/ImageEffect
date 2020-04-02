@@ -29,7 +29,7 @@ Rectangle {
     RectangleProperties {
         id : rectProperty
         anchors.top: rectTitle.bottom
-        anchors.topMargin: 15
+        anchors.topMargin: 1
 
         ColumnLayout {
             id: layout
