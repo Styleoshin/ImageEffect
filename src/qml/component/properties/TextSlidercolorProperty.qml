@@ -21,7 +21,7 @@ Item {
 
         MouseArea {
             anchors.fill: parent
-            onDoubleClicked: start_value = start_value
+            onDoubleClicked: spinBox.value = element.start_value * 100
         }
     }
 
