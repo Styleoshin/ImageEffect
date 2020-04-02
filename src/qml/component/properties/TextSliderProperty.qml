@@ -38,7 +38,7 @@ Item {
         anchors.right: spinBox.left
         anchors.verticalCenter: parent.verticalCenter
 
-        onValueChanged: spinBox.value = value * 100
+        onValueChanged: spinBox.value = (value * 100).toFixed(0)
     }
 
     SpinBoxFloat {
