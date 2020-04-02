@@ -2,6 +2,7 @@ import QtQuick 2.0
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.14
 import QtQuick.Controls.Material 2.12
+import "pannel_effects"
 import "../properties"
 
 Rectangle {
@@ -14,7 +15,7 @@ Rectangle {
         id: rectTitle
         width: parent.width
         height: 35
-        title: qsTr("Level Adjust")
+        title: qsTr("Glow")
 
         anchors.top: parent.top
         anchors.topMargin: 0
@@ -27,6 +28,7 @@ Rectangle {
 
     RectangleProperties {
         id : rectProperty
+        implicitHeight: 170
         anchors.top: rectTitle.bottom
         anchors.topMargin: 1
 
@@ -34,36 +36,33 @@ Rectangle {
             id: layout
             anchors.fill: parent
 
-            TextLvlAdjustProperty {
-                nameOption: qsTr("Gamma:")
+            TextSliderProperty {
+                nameOption: qsTr("Radius:")
+                Layout.leftMargin: 10
+                Layout.rightMargin: 10
+                Layout.fillWidth: true
+            }
+
+            TextSliderProperty {
+                nameOption: qsTr("Samples:")
+                Layout.leftMargin: 10
+                Layout.rightMargin: 10
+                Layout.fillWidth: true
+            }
+
+            TextSliderProperty {
+                nameOption: qsTr("Spread:")
+                minimum_value: 0
+                maximum_value: 1
+                step_size: 0.01
+                start_value: 0.5
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
                 Layout.fillWidth: true
             }
 
             TextColorProperty{
-                nameOption: qsTr("Minimum input:")
-                Layout.leftMargin: 10
-                Layout.rightMargin: 10
-                Layout.fillWidth: true
-            }
-
-            TextColorProperty{
-                nameOption: qsTr("Maximum input:")
-                Layout.leftMargin: 10
-                Layout.rightMargin: 10
-                Layout.fillWidth: true
-            }
-
-            TextColorProperty{
-                nameOption: qsTr("Minimum output:")
-                Layout.leftMargin: 10
-                Layout.rightMargin: 10
-                Layout.fillWidth: true
-            }
-
-            TextColorProperty{
-                nameOption: qsTr("Maximum output:")
+                nameOption: qsTr("Color:")
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
                 Layout.fillWidth: true

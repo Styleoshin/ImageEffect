@@ -1,6 +1,7 @@
 import QtQuick 2.0
 import QtQuick.Layouts 1.3
-import "../properties"
+import "../../properties"
+
 
 RectangleProperties {
     id: rectMain
@@ -12,8 +13,8 @@ RectangleProperties {
 
         TextDialProperty {
             nameOption: qsTr("Angle:")
-            minimum_value: 0
-            maximum_value: 360
+            minimum_value: -180
+            maximum_value: 180
             step_size: 1
             start_value: 0
             Layout.leftMargin: 10
@@ -33,19 +34,8 @@ RectangleProperties {
         }
 
         TextSpinBoxProperty {
-            nameOption: qsTr("Horizental offset:")
-            minimum_value: -10000
-            maximum_value: 10000
-            step_size: 100
-            start_value: 0
-            Layout.leftMargin: 10
-            Layout.rightMargin: 10
-            Layout.fillWidth: true
-        }
-
-        TextSpinBoxProperty {
-            nameOption: qsTr("Vertical offset:")
-            minimum_value: -10000
+            nameOption: qsTr("Lenght:")
+            minimum_value: 0
             maximum_value: 10000
             step_size: 100
             start_value: 0

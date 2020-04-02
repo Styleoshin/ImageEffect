@@ -1,7 +1,6 @@
 import QtQuick 2.0
 import QtQuick.Layouts 1.3
-import "../properties"
-
+import "../../properties"
 
 RectangleProperties {
     id: rectMain

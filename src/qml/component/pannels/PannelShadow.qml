@@ -2,11 +2,12 @@ import QtQuick 2.0
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.14
 import QtQuick.Controls.Material 2.12
+import "pannel_effects"
 import "../properties"
 
 Rectangle {
     id: rectMain
-    implicitWidth: childrenRect.width
+    implicitWidth: rectProperty.width
     implicitHeight: childrenRect.height
     color: "#474747"
 
@@ -14,21 +15,20 @@ Rectangle {
         id: rectTitle
         width: parent.width
         height: 35
-        title: qsTr("Blur")
+        title: qsTr("Shadow")
 
         anchors.top: parent.top
         anchors.topMargin: 0
 
         onClickHideProperties: {
             layout.clip = true
-            rectProperty.state = ( rectProperty.state == "hideProperties" )? "" : "hideProperties"
+            rectProperty.state = (rectProperty.state == "hideProperties")? "" : "hideProperties"
         }
     }
 
     RectangleProperties {
         id : rectProperty
-        height: 140
-
+        implicitHeight: 340
         anchors.top: rectTitle.bottom
         anchors.topMargin: 1
 
@@ -38,31 +38,32 @@ Rectangle {
             anchors.fill: parent
 
             ComboBox {
-                id: cbBlur
-                model: [ qsTr("Fast"), qsTr("Gaussian") ]
+                id: cbShadow
+                model: [ qsTr("Drop shadow"), qsTr("Inner shadow") ]
                 Material.accent: Material.Teal
 
+                Layout.preferredWidth: 150
                 Layout.preferredHeight: 35
                 Layout.leftMargin: 15
 
-                onActivated: gaussianBlur.state = (index)? "showGaussianBlur" : ""
+                onActivated: innerShadow.state = (index)? "showInnerShadow" : ""
             }
 
-            PannelFastBlur {
-                id: fastBlur
-                Layout.preferredHeight: 80
+            PannelDropShadow {
+                id: dropShadow
+                Layout.preferredHeight: 270
             }
 
-            PannelGaussianBlur {
-                id: gaussianBlur
+            PannelInnerShadow {
+                id: innerShadow
                 clip: true
                 Layout.preferredHeight: 0
 
                 states: State {
-                    name: "showGaussianBlur"
-                    PropertyChanges { target: fastBlur; clip:true; Layout.preferredHeight:0 }
-                    PropertyChanges { target: gaussianBlur; clip:false; Layout.preferredHeight:210 }
-                    PropertyChanges { target: rectProperty; height:250 }
+                    name: "showInnerShadow"
+                    PropertyChanges { target: dropShadow; clip:true; Layout.preferredHeight:0 }
+                    PropertyChanges { target: innerShadow; clip:false; Layout.preferredHeight:270 }
+                    PropertyChanges { target: rectProperty; height:340 }
                 }
             }
         }
