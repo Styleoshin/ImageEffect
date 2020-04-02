@@ -4,13 +4,6 @@
         <file>qtquickcontrols2.conf</file>
         <file>src/qml/MyMenuBar.qml</file>
         <file>src/qml/ImageSource.qml</file>
-        <file>src/qml/component/TextSliderProperty.qml</file>
-        <file>src/qml/component/TextColorProperty.qml</file>
-        <file>src/qml/component/RectangleProperties.qml</file>
-        <file>src/qml/component/TextCheckboxProperty.qml</file>
-        <file>src/qml/component/TextSlidercolorProperty.qml</file>
-        <file>src/qml/component/TextLvlAdjustProperty.qml</file>
-        <file>src/qml/component/SpinBoxFloat.qml</file>
         <file>src/qml/component/pannel/PannelColor.qml</file>
         <file>src/qml/component/pannel/PannelGeneral.qml</file>
         <file>src/qml/component/pannel/PannelGlow.qml</file>
@@ -26,10 +19,17 @@
         <file>src/qml/component/pannel/PannelMotionBlur.qml</file>
         <file>src/qml/component/pannel/PannelColorize.qml</file>
         <file>src/qml/component/pannel/PannelHueSaturation.qml</file>
-        <file>src/qml/component/TextDialProperty.qml</file>
         <file>src/qml/component/pannel/PannelInnerShadow.qml</file>
         <file>src/qml/component/pannel/PannelDropShadow.qml</file>
-        <file>src/qml/component/TextSpinBoxProperty.qml</file>
         <file>src/qml/PannelEffect.qml</file>
+        <file>src/qml/component/properties/SpinBoxFloat.qml</file>
+        <file>src/qml/component/properties/TextCheckboxProperty.qml</file>
+        <file>src/qml/component/properties/TextColorProperty.qml</file>
+        <file>src/qml/component/properties/TextDialProperty.qml</file>
+        <file>src/qml/component/properties/TextLvlAdjustProperty.qml</file>
+        <file>src/qml/component/properties/TextSlidercolorProperty.qml</file>
+        <file>src/qml/component/properties/TextSliderProperty.qml</file>
+        <file>src/qml/component/properties/TextSpinBoxProperty.qml</file>
+        <file>src/qml/component/pannel/RectangleProperties.qml</file>
     </qresource>
 </RCC>
