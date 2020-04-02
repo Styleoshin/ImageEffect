@@ -43,6 +43,11 @@ Rectangle {
             TextSliderProperty {
                 nameOption: qsTr("Radius:")
 
+                minimum_value: 0
+                maximum_value: 100
+                step_size: 1
+                start_value: 1
+
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
                 Layout.fillWidth: true
@@ -50,6 +55,11 @@ Rectangle {
 
             TextSliderProperty {
                 nameOption: qsTr("Samples:")
+
+                minimum_value: 0
+                maximum_value: 100
+                step_size: 1
+                start_value: 9
 
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
