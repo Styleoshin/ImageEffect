@@ -27,7 +27,7 @@ Item {
 
     Slider {
         id: slider
-        width: 140
+        width: 132
         height: 10
         from: element.minimum_value
         to: element.maximum_value
