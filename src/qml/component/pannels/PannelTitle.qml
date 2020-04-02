@@ -2,35 +2,44 @@ import QtQuick 2.0
 
 Rectangle {
 
+    property string title : ""
+
+    signal clickHideProperties()
+
     implicitWidth: 400
     implicitHeight: 25
     color: "#474747"
-
-    signal clickHideProperties()
-    property string title : ""
 
     Text {
         color: "#ffffff"
         text: title
         font.family: "Calibri"
-        anchors.verticalCenter: parent.verticalCenter
-        anchors.left: parent.left
-        anchors.leftMargin: 40
         font.italic: false
         font.bold: true
         font.pointSize: 14
+
+        anchors {
+            verticalCenter: parent.verticalCenter
+            left: parent.left
+            leftMargin: 40
+        }
     }
 
     Image {
         id: imgShowProperties
+
         source: "qrc:/icons/show_properties.png"
         horizontalAlignment: Text.AlignHCenter
-        anchors.right: parent.right
-        anchors.rightMargin: 0
-        anchors.verticalCenter: parent.verticalCenter
+
+        anchors {
+            right: parent.right
+            rightMargin: 0
+            verticalCenter: parent.verticalCenter
+        }
 
         MouseArea {
             anchors.fill: parent
+
             onClicked:
             {
                 parent.state = (parent.state == "hideProperties")? "" : "hideProperties"
@@ -48,11 +57,14 @@ Rectangle {
         height: 2
         radius: 50
         color: "#3f3f3f"
-        anchors.left: parent.left
-        anchors.leftMargin: 50
-        anchors.right: parent.right
-        anchors.rightMargin: 50
-        anchors.top: parent.bottom
-        anchors.topMargin: -1
+
+        anchors {
+            left: parent.left
+            leftMargin: 50
+            right: parent.right
+            rightMargin: 50
+            top: parent.bottom
+            topMargin: -1
+        }
     }
 }

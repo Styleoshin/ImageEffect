@@ -4,6 +4,13 @@ import QtQuick.Controls.Material 2.12
 
 SpinBox {
     id: spinBox
+
+    property int decimals: 2
+    property int minimum_value: 0
+    property int maximum_value: 1
+    property real start_value: 0.5
+    property real step_size: 1
+
     width: 130
     editable: true
     from: minimum_value * 100
@@ -11,12 +18,6 @@ SpinBox {
     value: start_value * 100
     stepSize: step_size * 100
     Material.accent: Material.Teal
-
-    property int decimals: 2
-    property int minimum_value: 0
-    property int maximum_value: 1
-    property real start_value: 0.5
-    property real step_size: 1
 
     validator: DoubleValidator {
         bottom: Math.min(spinBox.from, spinBox.to)

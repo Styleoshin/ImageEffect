@@ -5,16 +5,22 @@ import QtQuick.Controls.Material 2.12
 
 Item {
     id: element
+
+    property string nameOption: ""
+
     implicitWidth: 200
     implicitHeight: 35
-    property string nameOption: ""
 
     Label {
         id: label
+
         text: nameOption
-        anchors.verticalCenter: parent.verticalCenter
-        anchors.left: parent.left
         font.pointSize: 9
+
+        anchors {
+            verticalCenter: parent.verticalCenter
+            left: parent.left
+        }
 
         MouseArea {
             anchors.fill: parent
@@ -28,41 +34,47 @@ Item {
 
     RowLayout{
         spacing: 10
-        anchors.verticalCenter: parent.verticalCenter
-        anchors.right: parent.right
-        anchors.rightMargin: 40
+
+        anchors {
+            verticalCenter: parent.verticalCenter
+            right: parent.right
+            rightMargin: 40
+        }
 
         SpinBoxFloat{
             id: sb1
+
             minimum_value: 0
             maximum_value: 20
             step_size: 0.5
             start_value: 1
             Layout.preferredWidth: 50
-            up.indicator: Item{}
-            down.indicator: Item{}
+            up.indicator: Item {}
+            down.indicator: Item {}
         }
 
         SpinBoxFloat{
             id: sb2
+
             minimum_value: 0
             maximum_value: 20
             step_size: 0.5
             start_value: 1
             Layout.preferredWidth: 50
-            up.indicator: Item{}
-            down.indicator: Item{}
+            up.indicator: Item {}
+            down.indicator: Item {}
         }
 
         SpinBoxFloat{
             id: sb3
+
             minimum_value: 0
             maximum_value: 20
             step_size: 0.5
             start_value: 1
             Layout.preferredWidth: 50
-            up.indicator: Item{}
-            down.indicator: Item{}
+            up.indicator: Item {}
+            down.indicator: Item {}
         }
     }
 }

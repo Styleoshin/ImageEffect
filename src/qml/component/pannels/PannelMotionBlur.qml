@@ -7,11 +7,13 @@ import "../properties"
 
 Rectangle {
     id: rectMain
+
     implicitWidth: childrenRect.width
     implicitHeight: childrenRect.height
     color: "#474747"
 
     PannelTitle {
+
         id: rectTitle
         width: parent.width
         height: 35

@@ -7,18 +7,19 @@ import "../properties"
 
 Rectangle {
     id: rectMain
+
     implicitWidth: rectProperty.width
     implicitHeight: childrenRect.height
     color: "#474747"
 
     PannelTitle {
         id: rectTitle
+
         width: parent.width
         height: 35
         title: qsTr("Shadow")
 
         anchors.top: parent.top
-        anchors.topMargin: 0
 
         onClickHideProperties: {
             layout.clip = true

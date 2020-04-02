@@ -2,16 +2,22 @@ import QtQuick.Controls 2.14
 import QtQuick.Dialogs 1.2
 
 MenuBar {
+    id: menuBar
+
     signal chooseImage(string path)
 
     Menu {
         title: qsTr("&File")
+
         Action {
             text: qsTr("&Open file...")
             onTriggered: fileDialog.open()
         }
+
         Action { text: qsTr("Save &As...") }
+
         MenuSeparator { }
+
         Action {
             text: qsTr("&Quit")
             onTriggered: Qt.quit()

@@ -5,10 +5,12 @@ import "../qml/component/pannels"
 
 ScrollView {
     id :scroll
+
     contentWidth: -1
 
     ColumnLayout {
         id: columnLayout
+
         anchors.fill: parent
         spacing: 15
 

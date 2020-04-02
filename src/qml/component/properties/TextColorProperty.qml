@@ -4,17 +4,24 @@ import QtQuick.Dialogs 1.0
 
 Item {
     id: element
+
+    property string nameOption: ""
+
+    signal chooseColor(string color)
+
     implicitWidth: 200
     implicitHeight: 35
-    property string nameOption: ""
-    signal chooseColor(string color)
 
     Label {
         id: label
+
         text: nameOption
-        anchors.verticalCenter: parent.verticalCenter
-        anchors.left: parent.left
         font.pointSize: 9
+
+        anchors {
+            verticalCenter: parent.verticalCenter
+            left: parent.left
+        }
     }
 
     Rectangle {
@@ -22,7 +29,6 @@ Item {
         height: 18
         color: "#d4ffec"
         radius: 5
-        border.width: 0
         gradient: Gradient {
             GradientStop {
                 position: 0
@@ -45,6 +51,7 @@ Item {
 
     ColorDialog {
         id: colorDialog
+
         title: qsTr("Please choose a color")
         onAccepted: {
             chooseColor(colorDialog.color)

@@ -16,7 +16,6 @@ Rectangle {
         title: qsTr("General")
 
         anchors.top: parent.top
-        anchors.topMargin: 0
 
         onClickHideProperties: {
             layout.clip = true
