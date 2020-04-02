@@ -31,7 +31,7 @@ Rectangle {
         height: 210
 
         anchors.top: rectTitle.bottom
-        anchors.topMargin: 1
+        anchors.topMargin: 5
 
         ColumnLayout {
             id: layout

@@ -27,7 +27,7 @@ Rectangle {
     RectangleProperties {
         id : rectProperty
         anchors.top: rectTitle.bottom
-        anchors.topMargin: 1
+        anchors.topMargin: 15
 
         ColumnLayout {
             id: layout
