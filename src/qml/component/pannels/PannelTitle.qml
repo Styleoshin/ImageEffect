@@ -13,10 +13,13 @@ Rectangle {
     Text {
         color: "#ffffff"
         text: title
-        font.family: "Calibri"
-        font.italic: false
-        font.bold: true
-        font.pointSize: 14
+
+        font {
+            family: "Calibri"
+            italic: false
+            bold: true
+            pointSize: 14
+        }
 
         anchors {
             verticalCenter: parent.verticalCenter

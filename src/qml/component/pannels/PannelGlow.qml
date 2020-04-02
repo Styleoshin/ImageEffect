@@ -7,18 +7,19 @@ import "../properties"
 
 Rectangle {
     id: rectMain
+
     implicitWidth: rectProperty.width
     implicitHeight: childrenRect.height
     color: "#474747"
 
     PannelTitle {
         id: rectTitle
+
         width: parent.width
         height: 35
         title: qsTr("Glow")
 
         anchors.top: parent.top
-        anchors.topMargin: 0
 
         onClickHideProperties: {
             layout.clip = true
@@ -29,8 +30,11 @@ Rectangle {
     RectangleProperties {
         id : rectProperty
         implicitHeight: 170
-        anchors.top: rectTitle.bottom
-        anchors.topMargin: 1
+
+        anchors {
+            top: rectTitle.bottom
+            topMargin: 1
+        }
 
         ColumnLayout {
             id: layout
@@ -38,6 +42,7 @@ Rectangle {
 
             TextSliderProperty {
                 nameOption: qsTr("Radius:")
+
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
                 Layout.fillWidth: true
@@ -45,6 +50,7 @@ Rectangle {
 
             TextSliderProperty {
                 nameOption: qsTr("Samples:")
+
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
                 Layout.fillWidth: true
@@ -52,10 +58,12 @@ Rectangle {
 
             TextSliderProperty {
                 nameOption: qsTr("Spread:")
+
                 minimum_value: 0
                 maximum_value: 1
                 step_size: 0.01
                 start_value: 0.5
+
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
                 Layout.fillWidth: true

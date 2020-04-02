@@ -5,12 +5,14 @@ import "../properties"
 
 Rectangle {
     id: rectMain
+
     implicitWidth: rectProperty.width
     implicitHeight: childrenRect.height
     color: "#474747"
 
     PannelTitle {
         id: rectTitle
+
         width: parent.width
         height: 35
         title: qsTr("General")
@@ -25,8 +27,11 @@ Rectangle {
 
     RectangleProperties {
         id : rectProperty
-        anchors.top: rectTitle.bottom
-        anchors.topMargin: 1
+
+        anchors {
+            top: rectTitle.bottom
+            topMargin: 1
+        }
 
         ColumnLayout {
             id: layout
@@ -34,44 +39,51 @@ Rectangle {
 
             TextSliderProperty {
                 nameOption: qsTr("Brightness:")
+
                 minimum_value: -1
                 maximum_value: 1
                 step_size: 0.01
                 start_value: 0
+
+                Layout.fillWidth: true
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
-                Layout.fillWidth: true
             }
 
             TextSliderProperty {
                 nameOption: qsTr("Contrast:")
+
                 minimum_value: -1
                 maximum_value: 1
                 step_size: 0.01
                 start_value: 0
+
+                Layout.fillWidth: true
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
-                Layout.fillWidth: true
             }
 
             TextSliderProperty {
                 nameOption: qsTr("Desaturate:")
+
                 minimum_value: 0
                 maximum_value: 1
                 step_size: 0.01
                 start_value: 0
+
+                Layout.fillWidth: true
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
-                Layout.fillWidth: true
-
             }
 
             TextSliderProperty {
                 nameOption: qsTr("Luminance:")
+
                 minimum_value: 0
                 maximum_value: 100
                 step_size: 1
                 start_value: 1
+
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
                 Layout.fillWidth: true
@@ -79,9 +91,10 @@ Rectangle {
 
             TextColorProperty{
                 nameOption: qsTr("Color overlay:")
+
+                Layout.fillWidth: true
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
-                Layout.fillWidth: true
             }
         }
     }

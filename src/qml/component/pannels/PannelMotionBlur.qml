@@ -13,14 +13,13 @@ Rectangle {
     color: "#474747"
 
     PannelTitle {
-
         id: rectTitle
+
         width: parent.width
         height: 35
         title: qsTr("Motion Blur")
 
         anchors.top: parent.top
-        anchors.topMargin: 0
 
         onClickHideProperties: {
             layout.clip = true
@@ -32,16 +31,20 @@ Rectangle {
         id : rectProperty
         height: 210
 
-        anchors.top: rectTitle.bottom
-        anchors.topMargin: 1
+        anchors {
+            top: rectTitle.bottom
+            topMargin: 1
+        }
 
         ColumnLayout {
             id: layout
             spacing: 0
+
             anchors.fill: parent
 
             ComboBox {
                 id: cbMotionBlur
+
                 model: [ qsTr("Directional"), qsTr("Radial"), qsTr("Zoom") ]
                 Material.accent: Material.Teal
 
@@ -70,6 +73,7 @@ Rectangle {
 
             PannelDirectionalBlur {
                 id: directionalBlur
+
                 clip: true
                 Layout.preferredHeight: 0
 
@@ -82,6 +86,7 @@ Rectangle {
 
             PannelRadialBlur {
                 id: radialBlur
+
                 clip: true
                 Layout.preferredHeight: 0
 
@@ -94,6 +99,7 @@ Rectangle {
 
             PannelZoomBlur {
                 id: zoomBlur
+
                 clip: true
                 Layout.preferredHeight: 0
 

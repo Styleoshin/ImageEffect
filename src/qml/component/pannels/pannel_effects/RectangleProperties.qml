@@ -2,6 +2,7 @@ import QtQuick 2.0
 
 Rectangle {
     id : rectProperty
+
     implicitWidth: 410
     implicitHeight : 200
     color: "#474747"

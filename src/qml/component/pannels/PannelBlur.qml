@@ -7,18 +7,19 @@ import "../properties"
 
 Rectangle {
     id: rectMain
+
     implicitWidth: childrenRect.width
     implicitHeight: childrenRect.height
     color: "#474747"
 
     PannelTitle {
         id: rectTitle
+
         width: parent.width
         height: 35
         title: qsTr("Blur")
 
         anchors.top: parent.top
-        anchors.topMargin: 0
 
         onClickHideProperties: {
             layout.clip = true
@@ -30,12 +31,15 @@ Rectangle {
         id : rectProperty
         height: 140
 
-        anchors.top: rectTitle.bottom
-        anchors.topMargin: 1
+        anchors {
+            top: rectTitle.bottom
+            topMargin: 1
+        }
 
         ColumnLayout {
             id: layout
             spacing: 0
+
             anchors.fill: parent
 
             ComboBox {
@@ -56,6 +60,7 @@ Rectangle {
 
             PannelGaussianBlur {
                 id: gaussianBlur
+
                 clip: true
                 Layout.preferredHeight: 0
 

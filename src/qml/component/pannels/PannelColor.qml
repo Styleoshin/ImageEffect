@@ -7,18 +7,19 @@ import "../properties"
 
 Rectangle {
     id: rectMain
+
     implicitWidth: rectProperty.width
     implicitHeight: childrenRect.height
     color: "#474747"
 
     PannelTitle {
         id: rectTitle
+
         width: parent.width
         height: 35
         title: qsTr("Color")
 
         anchors.top: parent.top
-        anchors.topMargin: 0
 
         onClickHideProperties: {
             layout.clip = true
@@ -29,23 +30,27 @@ Rectangle {
     RectangleProperties {
         id : rectProperty
         implicitHeight: 180
-        anchors.top: rectTitle.bottom
-        anchors.topMargin: 1
+
+        anchors {
+            top: rectTitle.bottom
+            topMargin: 1
+        }
 
         ColumnLayout {
             id: layout
+
             anchors.fill: parent
             spacing: 0
 
             ComboBox {
+                model: [ qsTr("Colorize"), qsTr("Hue Saturation") ]
                 Material.accent: Material.Teal
 
-                model: [ qsTr("Colorize"), qsTr("Hue Saturation") ]
                 Layout.leftMargin: 15
                 Layout.preferredWidth: 160
                 Layout.preferredHeight: 35
-                onActivated: hueSaturation.state = (index)? "showHueSaturation" : ""
 
+                onActivated: hueSaturation.state = (index)? "showHueSaturation" : ""
             }
 
             PannelColorize {

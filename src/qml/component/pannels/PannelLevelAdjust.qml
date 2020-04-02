@@ -7,18 +7,19 @@ import "../properties"
 
 Rectangle {
     id: rectMain
+
     implicitWidth: rectProperty.width
     implicitHeight: childrenRect.height
     color: "#474747"
 
     PannelTitle {
         id: rectTitle
+
         width: parent.width
         height: 35
         title: qsTr("Level Adjust")
 
         anchors.top: parent.top
-        anchors.topMargin: 0
 
         onClickHideProperties: {
             layout.clip = true
@@ -28,8 +29,11 @@ Rectangle {
 
     RectangleProperties {
         id : rectProperty
-        anchors.top: rectTitle.bottom
-        anchors.topMargin: 1
+
+        anchors {
+            top: rectTitle.bottom
+            topMargin: 1
+        }
 
         ColumnLayout {
             id: layout
@@ -37,6 +41,7 @@ Rectangle {
 
             TextLvlAdjustProperty {
                 nameOption: qsTr("Gamma:")
+
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
                 Layout.fillWidth: true
@@ -44,6 +49,7 @@ Rectangle {
 
             TextColorProperty{
                 nameOption: qsTr("Minimum input:")
+
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
                 Layout.fillWidth: true
@@ -51,6 +57,7 @@ Rectangle {
 
             TextColorProperty{
                 nameOption: qsTr("Maximum input:")
+
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
                 Layout.fillWidth: true
@@ -58,6 +65,7 @@ Rectangle {
 
             TextColorProperty{
                 nameOption: qsTr("Minimum output:")
+
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
                 Layout.fillWidth: true
@@ -65,6 +73,7 @@ Rectangle {
 
             TextColorProperty{
                 nameOption: qsTr("Maximum output:")
+
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
                 Layout.fillWidth: true

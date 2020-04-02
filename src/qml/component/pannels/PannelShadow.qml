@@ -30,16 +30,21 @@ Rectangle {
     RectangleProperties {
         id : rectProperty
         implicitHeight: 340
-        anchors.top: rectTitle.bottom
-        anchors.topMargin: 1
+
+        anchors {
+            top: rectTitle.bottom
+            topMargin: 1
+        }
 
         ColumnLayout {
             id: layout
             spacing: 0
+
             anchors.fill: parent
 
             ComboBox {
                 id: cbShadow
+
                 model: [ qsTr("Drop shadow"), qsTr("Inner shadow") ]
                 Material.accent: Material.Teal
 
@@ -57,6 +62,7 @@ Rectangle {
 
             PannelInnerShadow {
                 id: innerShadow
+
                 clip: true
                 Layout.preferredHeight: 0
 
