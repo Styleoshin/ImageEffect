@@ -12,10 +12,10 @@ RectangleProperties {
 
         TextSpinBoxProperty {
             nameOption: qsTr("Samples:")
-            minimum_value: 0
-            maximum_value: 10000
-            step_size: 100
-            start_value: 0
+            minimumValue: 0
+            maximumValue: 10000
+            step: 100
+            startValue: 0
 
             Layout.fillWidth: true
             Layout.leftMargin: 10
@@ -25,10 +25,10 @@ RectangleProperties {
         TextSpinBoxProperty {
             nameOption: qsTr("Length:")
 
-            minimum_value: 0
-            maximum_value: 10000
-            step_size: 100
-            start_value: 0
+            minimumValue: 0
+            maximumValue: 10000
+            step: 100
+            startValue: 0
 
             Layout.fillWidth: true
             Layout.leftMargin: 10
@@ -38,10 +38,10 @@ RectangleProperties {
         TextSpinBoxProperty {
             nameOption: qsTr("Horizental offset:")
 
-            minimum_value: -10000
-            maximum_value: 10000
-            step_size: 100
-            start_value: 0
+            minimumValue: -10000
+            maximumValue: 10000
+            step: 100
+            startValue: 0
 
             Layout.fillWidth: true
             Layout.leftMargin: 10
@@ -51,10 +51,10 @@ RectangleProperties {
         TextSpinBoxProperty {
             nameOption: qsTr("Vertical offset:")
 
-            minimum_value: -10000
-            maximum_value: 10000
-            step_size: 100
-            start_value: 0
+            minimumValue: -10000
+            maximumValue: 10000
+            step: 100
+            startValue: 0
 
             Layout.fillWidth: true
             Layout.leftMargin: 10

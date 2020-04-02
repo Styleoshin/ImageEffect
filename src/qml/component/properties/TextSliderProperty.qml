@@ -6,10 +6,10 @@ Item {
     id: element
 
     property string nameOption: ""
-    property int minimum_value: 0
-    property int maximum_value: 1
-    property real start_value: 0.5
-    property real step_size: 0.01
+    property int minimumValue: 0
+    property int maximumValue: 1
+    property real startValue: 0.5
+    property real step: 0.01
 
     implicitWidth: 200
     implicitHeight: 35
@@ -27,7 +27,7 @@ Item {
 
         MouseArea {
             anchors.fill: parent
-            onDoubleClicked: spinBox.value = element.start_value * 100
+            onDoubleClicked: spinBox.value = element.startValue * 100
         }
     }
 
@@ -36,10 +36,10 @@ Item {
 
         width: 140
         height: 20
-        from: element.minimum_value
-        to: element.maximum_value
-        value: element.start_value
-        stepSize: element.step_size
+        from: element.minimumValue
+        to: element.maximumValue
+        value: element.startValue
+        stepSize: element.step
         Material.accent: Material.Teal
 
         anchors {
@@ -55,10 +55,10 @@ Item {
 
         width: 130
         editable: true
-        minimum_value: element.minimum_value
-        maximum_value: element.maximum_value
-        start_value: element.start_value
-        step_size: element.step_size
+        minimumValue: element.minimumValue
+        maximumValue: element.maximumValue
+        startValue: element.startValue
+        step: element.step
 
         anchors {
             right: parent.right

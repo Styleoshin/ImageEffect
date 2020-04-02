@@ -20,10 +20,10 @@ RectangleProperties {
         TextSliderProperty {
             nameOption: qsTr("Saturation:")
 
-            minimum_value: 0
-            maximum_value: 1
-            step_size: 0.01
-            start_value: 1
+            minimumValue: 0
+            maximumValue: 1
+            step: 0.01
+            startValue: 1
 
             Layout.fillWidth: true
             Layout.leftMargin: 10
@@ -33,10 +33,10 @@ RectangleProperties {
         TextSliderProperty {
             nameOption: qsTr("Lightness:")
 
-            minimum_value: -1
-            maximum_value: 1
-            step_size: 0.01
-            start_value: 0
+            minimumValue: -1
+            maximumValue: 1
+            step: 0.01
+            startValue: 0
 
             Layout.fillWidth: true
             Layout.leftMargin: 10

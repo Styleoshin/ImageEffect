@@ -6,17 +6,17 @@ SpinBox {
     id: spinBox
 
     property int decimals: 2
-    property int minimum_value: 0
-    property int maximum_value: 1
-    property real start_value: 0.5
-    property real step_size: 1
+    property int minimumValue: 0
+    property int maximumValue: 1
+    property real startValue: 0.5
+    property real step: 1
 
     width: 130
     editable: true
-    from: minimum_value * 100
-    to: maximum_value * 100
-    value: start_value * 100
-    stepSize: step_size * 100
+    from: minimumValue * 100
+    to: maximumValue * 100
+    value: startValue * 100
+    stepSize: step * 100
     Material.accent: Material.Teal
 
     validator: DoubleValidator {

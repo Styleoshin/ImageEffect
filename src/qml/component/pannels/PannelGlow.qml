@@ -43,10 +43,10 @@ Rectangle {
             TextSliderProperty {
                 nameOption: qsTr("Radius:")
 
-                minimum_value: 0
-                maximum_value: 100
-                step_size: 1
-                start_value: 1
+                minimumValue: 0
+                maximumValue: 100
+                step: 1
+                startValue: 1
 
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
@@ -56,10 +56,10 @@ Rectangle {
             TextSliderProperty {
                 nameOption: qsTr("Samples:")
 
-                minimum_value: 0
-                maximum_value: 100
-                step_size: 1
-                start_value: 9
+                minimumValue: 0
+                maximumValue: 100
+                step: 1
+                startValue: 9
 
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
@@ -69,10 +69,10 @@ Rectangle {
             TextSliderProperty {
                 nameOption: qsTr("Spread:")
 
-                minimum_value: 0
-                maximum_value: 1
-                step_size: 0.01
-                start_value: 0.5
+                minimumValue: 0
+                maximumValue: 1
+                step: 0.01
+                startValue: 0.5
 
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10

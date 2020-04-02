@@ -13,10 +13,10 @@ RectangleProperties {
         TextDialProperty {
             nameOption: qsTr("Radius:")
 
-            minimum_value: 0
-            maximum_value: 64
-            step_size: 1
-            start_value: 0
+            minimumValue: 0
+            maximumValue: 64
+            step: 1
+            startValue: 0
 
             Layout.fillWidth: true
             Layout.leftMargin: 10

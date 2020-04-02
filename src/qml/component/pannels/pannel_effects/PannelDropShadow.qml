@@ -21,10 +21,10 @@ RectangleProperties {
         TextSliderProperty {
             nameOption: qsTr("Radius:")
 
-            minimum_value: 0
-            maximum_value: 100
-            step_size: 5
-            start_value: 0
+            minimumValue: 0
+            maximumValue: 100
+            step: 5
+            startValue: 0
 
             Layout.fillWidth: true
             Layout.leftMargin: 10
@@ -34,10 +34,10 @@ RectangleProperties {
         TextSliderProperty {
             nameOption: qsTr("Samples:")
 
-            minimum_value: 0
-            maximum_value: 100
-            step_size: 10
-            start_value: 9        
+            minimumValue: 0
+            maximumValue: 100
+            step: 10
+            startValue: 9
 
             Layout.fillWidth: true
             Layout.leftMargin: 10
@@ -47,10 +47,10 @@ RectangleProperties {
         TextSliderProperty {
             nameOption: qsTr("Spread:")
 
-            minimum_value: 0
-            maximum_value: 1
-            step_size: 0.01
-            start_value: 0
+            minimumValue: 0
+            maximumValue: 1
+            step: 0.01
+            startValue: 0
 
             Layout.fillWidth: true
             Layout.leftMargin: 10
@@ -60,10 +60,10 @@ RectangleProperties {
         TextSpinBoxProperty {
             nameOption: qsTr("Horizental offset:")
 
-            minimum_value: -10000
-            maximum_value: 10000
-            step_size: 100
-            start_value: 0
+            minimumValue: -10000
+            maximumValue: 10000
+            step: 100
+            startValue: 0
 
             Layout.fillWidth: true
             Layout.leftMargin: 10
@@ -73,10 +73,10 @@ RectangleProperties {
         TextSpinBoxProperty {
             nameOption: qsTr("Vertical offset:")
 
-            minimum_value: -10000
-            maximum_value: 10000
-            step_size: 100
-            start_value: 0
+            minimumValue: -10000
+            maximumValue: 10000
+            step: 100
+            startValue: 0
 
             Layout.fillWidth: true
             Layout.leftMargin: 10
