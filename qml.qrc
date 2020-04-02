@@ -30,5 +30,6 @@
         <file>src/qml/component/pannel/PannelInnerShadow.qml</file>
         <file>src/qml/component/pannel/PannelDropShadow.qml</file>
         <file>src/qml/component/TextSpinBoxProperty.qml</file>
+        <file>src/qml/PannelEffect.qml</file>
     </qresource>
 </RCC>
