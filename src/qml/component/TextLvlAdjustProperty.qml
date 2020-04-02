@@ -34,6 +34,9 @@ Item {
 
         SpinBoxFloat{
             id: sb1
+            minimum_value: 0
+            maximum_value: 20
+            step_size: 0.5
             start_value: 1
             Layout.preferredWidth: 50
             up.indicator: Item{}
@@ -42,6 +45,9 @@ Item {
 
         SpinBoxFloat{
             id: sb2
+            minimum_value: 0
+            maximum_value: 20
+            step_size: 0.5
             start_value: 1
             Layout.preferredWidth: 50
             up.indicator: Item{}
@@ -50,6 +56,9 @@ Item {
 
         SpinBoxFloat{
             id: sb3
+            minimum_value: 0
+            maximum_value: 20
+            step_size: 0.5
             start_value: 1
             Layout.preferredWidth: 50
             up.indicator: Item{}
