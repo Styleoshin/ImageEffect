@@ -46,7 +46,7 @@ Item {
         }
 
         handle: Rectangle{
-            x:slider.leftPadding + slider.visualPosition * (slider.availableWidth - width)
+            x: slider.leftPadding + slider.visualPosition * (slider.availableWidth - (width * 0.01)) - 5
             y: slider.topPadding + slider.availableHeight / 2 - height / 2
             width: 10
             height: 20
