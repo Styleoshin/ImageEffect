@@ -28,7 +28,7 @@
         <file>component/pannels/pannel_effects/RectangleProperties.qml</file>
         <file>main.qml</file>
         <file>qtquickcontrols2.conf</file>
-        <file>app/ImageSource.qml</file>
+        <file>app/MyImage.qml</file>
         <file>app/MyMenuBar.qml</file>
         <file>app/PannelEffect.qml</file>
     </qresource>
