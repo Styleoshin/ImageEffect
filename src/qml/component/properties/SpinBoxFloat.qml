@@ -1,6 +1,5 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.14
-import QtQuick.Controls.Material 2.12
 
 SpinBox {
     id: spinBox
@@ -17,7 +16,6 @@ SpinBox {
     to: maximumValue * 100
     value: startValue * 100
     stepSize: step * 100
-    Material.accent: Material.Teal
 
     validator: DoubleValidator {
         bottom: Math.min(spinBox.from, spinBox.to)

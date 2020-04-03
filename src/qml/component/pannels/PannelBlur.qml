@@ -1,7 +1,6 @@
 import QtQuick 2.0
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.14
-import QtQuick.Controls.Material 2.12
 import "pannel_effects"
 import "../properties"
 
@@ -45,7 +44,6 @@ Rectangle {
             ComboBox {
                 id: cbBlur
                 model: [ qsTr("Fast"), qsTr("Gaussian") ]
-                Material.accent: Material.Teal
 
                 Layout.preferredHeight: 35
                 Layout.leftMargin: 15

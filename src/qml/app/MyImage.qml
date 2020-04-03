@@ -1,6 +1,5 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.14
-import QtQuick.Controls.Material 2.12
 
 Image {
     id: imgSource
@@ -39,7 +38,6 @@ Image {
         title: qsTr("Error")
         modal: true
         standardButtons: Dialog.Ok
-        Material.accent: Material.Teal
 
         anchors.centerIn: parent
 

@@ -1,6 +1,5 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.14
-import QtQuick.Controls.Material 2.12
 
 Item {
     id: element
@@ -91,7 +90,6 @@ Item {
             to:  element.maximumValue
             stepSize: element.step
             value: element.startValue
-            Material.accent: Material.Teal
 
             onMoved: spinBox.value = value * 100
         }

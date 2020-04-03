@@ -1,7 +1,6 @@
 import QtQuick 2.0
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.14
-import QtQuick.Controls.Material 2.12
 import "pannel_effects"
 import "../properties"
 
@@ -44,9 +43,7 @@ Rectangle {
 
             ComboBox {
                 id: cbMotionBlur
-
                 model: [ qsTr("Directional"), qsTr("Radial"), qsTr("Zoom") ]
-                Material.accent: Material.Teal
 
                 Layout.preferredHeight: 35
                 Layout.preferredWidth: 125

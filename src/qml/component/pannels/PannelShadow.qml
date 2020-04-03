@@ -1,7 +1,6 @@
 import QtQuick 2.0
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.14
-import QtQuick.Controls.Material 2.12
 import "pannel_effects"
 import "../properties"
 
@@ -44,9 +43,7 @@ Rectangle {
 
             ComboBox {
                 id: cbShadow
-
                 model: [ qsTr("Drop shadow"), qsTr("Inner shadow") ]
-                Material.accent: Material.Teal
 
                 Layout.preferredWidth: 150
                 Layout.preferredHeight: 35

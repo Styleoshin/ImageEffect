@@ -1,7 +1,6 @@
 import QtQuick 2.0
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.14
-import QtQuick.Controls.Material 2.12
 import "pannel_effects"
 import "../properties"
 
@@ -44,7 +43,6 @@ Rectangle {
 
             ComboBox {
                 model: [ qsTr("Colorize"), qsTr("Hue Saturation") ]
-                Material.accent: Material.Teal
 
                 Layout.leftMargin: 15
                 Layout.preferredWidth: 160

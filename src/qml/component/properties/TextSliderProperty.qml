@@ -1,6 +1,5 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.14
-import QtQuick.Controls.Material 2.12
 
 Item {
     id: element
@@ -40,7 +39,6 @@ Item {
         to: element.maximumValue
         value: element.startValue
         stepSize: element.step
-        Material.accent: Material.Teal
 
         anchors {
             right: spinBox.left
