@@ -29,7 +29,7 @@ Rectangle {
 
     RectangleProperties {
         id : rectProperty
-        height: 140
+        height: 130
 
         anchors {
             top: rectTitle.bottom
@@ -55,7 +55,7 @@ Rectangle {
 
             PannelFastBlur {
                 id: fastBlur
-                Layout.preferredHeight: 80
+                Layout.preferredHeight: 90
             }
 
             PannelGaussianBlur {
