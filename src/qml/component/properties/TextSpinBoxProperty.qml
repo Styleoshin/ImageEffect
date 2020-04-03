@@ -42,7 +42,6 @@ Item {
 
         anchors {
             right: parent.right
-            rightMargin: 20
             verticalCenter: parent.verticalCenter
         }
     }
