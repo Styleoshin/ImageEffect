@@ -3,7 +3,5 @@
         <file alias="hide_properties.png">ressource/icon/hide_properties.png</file>
         <file alias="show_properties.png">ressource/icon/show_properties.png</file>
     </qresource>
-    <qresource prefix="/image">
-        <file alias="slider_color.png">ressource/image/slider_color.PNG</file>
-    </qresource>
+    <qresource prefix="/image"/>
 </RCC>

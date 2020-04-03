@@ -46,10 +46,26 @@ Item {
             verticalCenter: parent.verticalCenter
         }
 
-        background: Image {
-            source: "qrc:/image/slider_color.png"
-            anchors.fill: parent
+        background: Rectangle {
+            width: parent.height
+            height: parent.width
+
+            rotation: 90
+            radius: 4
+
+            anchors.centerIn: parent
+
+            gradient: Gradient {
+                GradientStop { position: 1.0;  color: "#FF0000" }
+                GradientStop { position: 0.85; color: "#FFFF00" }
+                GradientStop { position: 0.76; color: "#00FF00" }
+                GradientStop { position: 0.5;  color: "#00FFFF" }
+                GradientStop { position: 0.33; color: "#0000FF" }
+                GradientStop { position: 0.16; color: "#FF00FF" }
+                GradientStop { position: 0.0;  color: "#FF0000" }
+            }
         }
+
         handle: Rectangle{
             x: slider.leftPadding + slider.visualPosition * (slider.availableWidth - (width * 0.01)) - 5
             y: slider.topPadding + slider.availableHeight / 2 - height / 2
