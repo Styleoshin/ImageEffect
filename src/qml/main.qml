@@ -5,6 +5,7 @@ import "app"
 
 ApplicationWindow {
     id: applicationWindow
+    visibility: Qt.WindowFullScreen // << the solution
     visible: true
     width: 1027
     height: 768
@@ -12,19 +13,26 @@ ApplicationWindow {
 
     menuBar: MyMenuBar{
         id: menuBar
-        onChooseImage: imageSource.source = path
+        onChooseImage: rectImages.imageSource = path
     }
 
-    /* ImageSource {
-        id: imageSource
-        anchors.right: pannel.left
-        anchors.rightMargin: 30
-        anchors.left: parent.left
-        anchors.leftMargin: 30
-        anchors.top: menuBar.bottom
-        anchors.topMargin: 20
-        //  anchors.fill: parent
-    }*/
+    RectangleImages {
+
+        id: rectImages
+        anchors {
+            top: menuBar.bottom
+            topMargin: 20
+
+            bottom: parent.bottom
+            bottomMargin: 20
+
+            right: pannelEffect.left
+            rightMargin: 20
+
+            left: parent.left
+            leftMargin: 20
+        }
+    }
 
     PannelEffect {
         id :pannelEffect

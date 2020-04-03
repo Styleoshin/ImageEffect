@@ -31,5 +31,6 @@
         <file>app/MyImage.qml</file>
         <file>app/MyMenuBar.qml</file>
         <file>app/PannelEffect.qml</file>
+        <file>app/RectangleImages.qml</file>
     </qresource>
 </RCC>
