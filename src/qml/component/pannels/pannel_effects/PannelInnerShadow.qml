@@ -35,9 +35,9 @@ RectangleProperties {
             nameOption: qsTr("Samples:")
 
             minimumValue: 0
-            maximumValue: 100
+            maximumValue: 32
             step: 10
-            startValue: 9
+            startValue: 0
 
             Layout.fillWidth: true
             Layout.leftMargin: 10
@@ -50,7 +50,7 @@ RectangleProperties {
             minimumValue: 0
             maximumValue: 1
             step: 0.01
-            startValue: 0
+            startValue: 0.5
 
             Layout.fillWidth: true
             Layout.leftMargin: 10
