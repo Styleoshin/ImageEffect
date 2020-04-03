@@ -1,0 +1,35 @@
+<RCC>
+    <qresource prefix="/">
+        <file>component/properties/SpinBoxFloat.qml</file>
+        <file>component/properties/TextCheckboxProperty.qml</file>
+        <file>component/properties/TextColorProperty.qml</file>
+        <file>component/properties/TextDialProperty.qml</file>
+        <file>component/properties/TextLvlAdjustProperty.qml</file>
+        <file>component/properties/TextSlidercolorProperty.qml</file>
+        <file>component/properties/TextSliderProperty.qml</file>
+        <file>component/properties/TextSpinBoxProperty.qml</file>
+        <file>component/pannels/PannelBlur.qml</file>
+        <file>component/pannels/PannelColor.qml</file>
+        <file>component/pannels/PannelGeneral.qml</file>
+        <file>component/pannels/PannelGlow.qml</file>
+        <file>component/pannels/PannelLevelAdjust.qml</file>
+        <file>component/pannels/PannelMotionBlur.qml</file>
+        <file>component/pannels/PannelShadow.qml</file>
+        <file>component/pannels/PannelTitle.qml</file>
+        <file>component/pannels/pannel_effects/PannelColorize.qml</file>
+        <file>component/pannels/pannel_effects/PannelDirectionalBlur.qml</file>
+        <file>component/pannels/pannel_effects/PannelDropShadow.qml</file>
+        <file>component/pannels/pannel_effects/PannelFastBlur.qml</file>
+        <file>component/pannels/pannel_effects/PannelGaussianBlur.qml</file>
+        <file>component/pannels/pannel_effects/PannelHueSaturation.qml</file>
+        <file>component/pannels/pannel_effects/PannelInnerShadow.qml</file>
+        <file>component/pannels/pannel_effects/PannelRadialBlur.qml</file>
+        <file>component/pannels/pannel_effects/PannelZoomBlur.qml</file>
+        <file>component/pannels/pannel_effects/RectangleProperties.qml</file>
+        <file>main.qml</file>
+        <file>qtquickcontrols2.conf</file>
+        <file>app/ImageSource.qml</file>
+        <file>app/MyMenuBar.qml</file>
+        <file>app/PannelEffect.qml</file>
+    </qresource>
+</RCC>

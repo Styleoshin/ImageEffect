@@ -30,15 +30,15 @@ find_package(Qt5 COMPONENTS Core Quick LinguistTools REQUIRED)
 
 if(ANDROID)
     add_library(ImageEffect SHARED
-      main.cpp
-      qml.qrc
+      ${CMAKE_CURRENT_LIST_DIR}/src/main.cpp
+      ${CMAKE_CURRENT_LIST_DIR}/src/qml/qml.qrc
       ressources.qrc
       ${TS_FILES}
     )
 else()
     add_executable(ImageEffect
-      main.cpp
-      qml.qrc
+      ${CMAKE_CURRENT_LIST_DIR}/src/main.cpp
+      ${CMAKE_CURRENT_LIST_DIR}/src/qml/qml.qrc
       ressources.qrc
       ${TS_FILES}
     )

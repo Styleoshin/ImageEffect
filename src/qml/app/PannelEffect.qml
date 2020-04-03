@@ -1,7 +1,7 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.14
 import QtQuick.Layouts 1.3
-import "../qml/component/pannels"
+import "../component/pannels"
 
 ScrollView {
     id :scroll
