@@ -1,8 +1,11 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
+#include <QLocale>
 
 int main(int argc, char *argv[])
 {
+    QLocale::setDefault(QLocale::English);
+
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 
     QGuiApplication app(argc, argv);
