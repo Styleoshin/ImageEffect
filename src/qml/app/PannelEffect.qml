@@ -17,9 +17,9 @@ ScrollView {
         PannelGeneral { id: general }
         PannelColor { id: color }
         PannelGlow { id: glow }
+        PannelLevelAdjust { id: lvlAdjust }
+        PannelShadow { id: shadow }
         PannelBlur { id: blur }
         PannelMotionBlur { id: motionBlur }
-        PannelShadow { id: shadow }
-        PannelLevelAdjust { id: lvlAdjust }
     }
 }
