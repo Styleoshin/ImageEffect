@@ -32,5 +32,6 @@
         <file>app/MyMenuBar.qml</file>
         <file>app/PannelEffect.qml</file>
         <file>app/RectangleImages.qml</file>
+        <file>component/MyColorDialog.qml</file>
     </qresource>
 </RCC>
