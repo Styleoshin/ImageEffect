@@ -1,11 +1,13 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.14
-import QtQuick.Dialogs 1.0
+import ".."
 
 Item {
     id: element
 
     property string nameOption: ""
+    property color colorDefault: "#FFFFFF"
+    property color colorCode: colorDefault
 
     signal chooseColor(string color)
 
@@ -21,6 +23,14 @@ Item {
         anchors {
             verticalCenter: parent.verticalCenter
             left: parent.left
+        }
+
+        MouseArea {
+            anchors.fill: parent
+            onDoubleClicked: {
+                colorDialog.resetDefault()
+                element.colorCode = element.colorDefault
+            }
         }
     }
 
@@ -49,12 +59,10 @@ Item {
         }
     }
 
-    ColorDialog {
+    MyColorDialog{
         id: colorDialog
+        value: element.colorDefault
 
-        title: qsTr("Please choose a color")
-        onAccepted: {
-            chooseColor(colorDialog.color)
-        }
+        onValueChanged: element.colorCode = value
     }
 }
