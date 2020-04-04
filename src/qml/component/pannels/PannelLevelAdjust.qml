@@ -49,6 +49,7 @@ Rectangle {
 
             TextColorProperty{
                 nameOption: qsTr("Minimum input:")
+                colorDefault: "#000000"
 
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
@@ -65,6 +66,7 @@ Rectangle {
 
             TextColorProperty{
                 nameOption: qsTr("Minimum output:")
+                colorDefault: "#000000"
 
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10

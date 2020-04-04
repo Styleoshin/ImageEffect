@@ -12,6 +12,7 @@ RectangleProperties {
 
         TextColorProperty{
             nameOption: qsTr("Color:")
+            colorDefault: "#000000"
 
             Layout.fillWidth: true
             Layout.leftMargin: 10

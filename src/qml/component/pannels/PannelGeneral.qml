@@ -91,6 +91,7 @@ Rectangle {
 
             TextColorProperty{
                 nameOption: qsTr("Color overlay:")
+                colorDefault: "transparent"
 
                 Layout.fillWidth: true
                 Layout.leftMargin: 10
