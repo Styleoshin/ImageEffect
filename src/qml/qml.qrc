@@ -33,5 +33,7 @@
         <file>app/PannelEffect.qml</file>
         <file>app/RectangleImages.qml</file>
         <file>component/MyColorDialog.qml</file>
+        <file>Singleton/qmldir</file>
+        <file>Singleton/SingletonEffects.qml</file>
     </qresource>
 </RCC>
