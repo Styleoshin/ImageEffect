@@ -6,7 +6,7 @@ Item {
 
     property string nameOption: ""
 
-    signal checkedState(bool state)
+    property bool checkState: false
 
     implicitWidth: 200
     implicitHeight: 35
@@ -31,6 +31,6 @@ Item {
             verticalCenter: parent.verticalCenter
         }
 
-        onCheckedChanged: checkedState( (checkState === Qt.Checked)? true:false )
+        onCheckedChanged: checkState = (checkState === Qt.Checked)? true:false
     }
 }
