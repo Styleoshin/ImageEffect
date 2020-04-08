@@ -9,6 +9,7 @@ Item {
     property int maximumValue: 1
     property real startValue: 0.5
     property real step: 0.01
+    property real value: startValue
 
     implicitWidth: 200
     implicitHeight: 35
@@ -26,7 +27,10 @@ Item {
 
         MouseArea {
             anchors.fill: parent
-            onDoubleClicked: spinBox.value = element.startValue * 100
+            onDoubleClicked: {
+                spinBox.value = element.startValue * 100
+                element.value = element.startValue
+            }
         }
     }
 
@@ -77,7 +81,10 @@ Item {
             verticalCenter: parent.verticalCenter
         }
 
-        onValueChanged: dial.value = value / 100
+        onValueChanged: {
+            dial.value = value / 100
+            element.value = value / 100
+        }
     }
 
     Dialog {
@@ -91,7 +98,10 @@ Item {
             stepSize: element.step
             value: element.startValue
 
-            onMoved: spinBox.value = value * 100
+            onMoved: {
+                spinBox.value = value * 100
+                element.value = value
+            }
         }
     }
 }

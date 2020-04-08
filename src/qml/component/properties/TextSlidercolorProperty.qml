@@ -9,6 +9,7 @@ Item {
     property int maximumValue: 1
     property real startValue: 0.5
     property real step: 0.01
+    property real value: startValue
 
     implicitWidth: 200
     implicitHeight: 35
@@ -26,7 +27,11 @@ Item {
 
         MouseArea {
             anchors.fill: parent
-            onDoubleClicked: spinBox.value = element.startValue * 100
+            onDoubleClicked:
+            {
+                spinBox.value = element.startValue * 100
+                element.value = element.startValue
+            }
         }
     }
 
@@ -39,8 +44,11 @@ Item {
         to: element.maximumValue
         value: element.startValue
         stepSize: element.step
-        onValueChanged: spinBox.value = (value * 100).toFixed(0)
-
+        onValueChanged:
+        {
+            spinBox.value = (value * 100).toFixed(0)
+            element.value = value
+        }
         anchors{
             right: spinBox.left
             verticalCenter: parent.verticalCenter
@@ -107,6 +115,9 @@ Item {
             verticalCenter: parent.verticalCenter
         }
 
-        onValueChanged: slider.value = value / 100
+        onValueChanged: {
+            slider.value = value / 100
+            element.value = value / 100
+        }
     }
 }
