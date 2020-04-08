@@ -7,7 +7,7 @@ Item {
 
     property string nameOption: ""
     property color colorDefault: "#FFFFFF"
-    property color colorCode: colorDefault
+    property color color: colorDefault
 
     signal chooseColor(string color)
 
@@ -29,7 +29,7 @@ Item {
             anchors.fill: parent
             onDoubleClicked: {
                 colorDialog.resetDefault()
-                element.colorCode = element.colorDefault
+                element.color = element.colorDefault
             }
         }
     }
@@ -63,6 +63,6 @@ Item {
         id: colorDialog
         value: element.colorDefault
 
-        onValueChanged: element.colorCode = value
+        onValueChanged: element.color = value
     }
 }
