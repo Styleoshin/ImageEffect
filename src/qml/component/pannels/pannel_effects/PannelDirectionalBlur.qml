@@ -21,7 +21,7 @@ RectangleProperties {
 
             Layout.fillWidth: true
             Layout.leftMargin: 10
-            Layout.rightMargin: 10        
+            Layout.rightMargin: 10
         }
 
         TextSpinBoxProperty {
