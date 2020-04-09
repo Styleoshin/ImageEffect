@@ -1,7 +1,7 @@
 import QtQuick 2.0
 import QtQuick.Layouts 1.3
 import "../../properties"
-
+import "../../../Singleton"
 
 RectangleProperties {
     id: rectMain
@@ -22,6 +22,9 @@ RectangleProperties {
             Layout.fillWidth: true
             Layout.leftMargin: 10
             Layout.rightMargin: 10
+
+            onValueChanged: SingletonEffects.directionalAngle = value
+            Component.onCompleted: SingletonEffects.directionalAngle = startValue
         }
 
         TextSpinBoxProperty {
@@ -35,6 +38,9 @@ RectangleProperties {
             Layout.fillWidth: true
             Layout.leftMargin: 10
             Layout.rightMargin: 10
+
+            onValueChanged: SingletonEffects.directionalSamples = value
+            Component.onCompleted: SingletonEffects.directionalSamples = startValue
         }
 
         TextSpinBoxProperty {
@@ -48,6 +54,9 @@ RectangleProperties {
             Layout.fillWidth: true
             Layout.leftMargin: 10
             Layout.rightMargin: 10
+
+            onValueChanged: SingletonEffects.directionalLenght = value
+            Component.onCompleted: SingletonEffects.directionalLenght = startValue
         }
 
         TextCheckboxProperty {
@@ -57,6 +66,9 @@ RectangleProperties {
             Layout.fillWidth: true
             Layout.leftMargin: 10
             Layout.rightMargin: 10
+
+            onCheckStateChanged: SingletonEffects.directionalTransparentBorder = checkState
+            Component.onCompleted: SingletonEffects.directionalTransparentBorder = checkStateDefault
         }
     }
 }

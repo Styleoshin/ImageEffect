@@ -1,6 +1,7 @@
 import QtQuick 2.0
 import QtQuick.Layouts 1.3
 import "../../properties"
+import "../../../Singleton"
 
 RectangleProperties {
     id: rectMain
@@ -21,6 +22,9 @@ RectangleProperties {
             Layout.fillWidth: true
             Layout.leftMargin: 10
             Layout.rightMargin: 10
+
+            onValueChanged: SingletonEffects.radialAngle = value
+            Component.onCompleted: SingletonEffects.radialAngle = startValue
         }
 
         TextSpinBoxProperty {
@@ -34,6 +38,9 @@ RectangleProperties {
             Layout.fillWidth: true
             Layout.leftMargin: 10
             Layout.rightMargin: 10
+
+            onValueChanged: SingletonEffects.radialSamples = value
+            Component.onCompleted: SingletonEffects.radialSamples = startValue
         }
 
         TextSpinBoxProperty {
@@ -47,6 +54,9 @@ RectangleProperties {
             Layout.fillWidth: true
             Layout.leftMargin: 10
             Layout.rightMargin: 10
+
+            onValueChanged: SingletonEffects.radialHorizontal = value
+            Component.onCompleted: SingletonEffects.radialHorizontal = startValue
         }
 
         TextSpinBoxProperty {
@@ -60,6 +70,9 @@ RectangleProperties {
             Layout.fillWidth: true
             Layout.leftMargin: 10
             Layout.rightMargin: 10
+
+            onValueChanged: SingletonEffects.radialVertical = value
+            Component.onCompleted: SingletonEffects.radialVertical = startValue
         }
 
         TextCheckboxProperty {
@@ -69,6 +82,9 @@ RectangleProperties {
             Layout.fillWidth: true
             Layout.leftMargin: 10
             Layout.rightMargin: 10
+
+            onCheckStateChanged: SingletonEffects.radialTransparentBorder = checkState
+            Component.onCompleted: SingletonEffects.radialTransparentBorder = checkStateDefault
         }
     }
 }

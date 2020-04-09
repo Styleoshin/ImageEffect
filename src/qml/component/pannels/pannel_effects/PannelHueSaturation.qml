@@ -1,6 +1,7 @@
 import QtQuick 2.0
 import QtQuick.Layouts 1.3
 import "../../properties"
+import "../../../Singleton"
 
 RectangleProperties {
     id : rectProperty
@@ -20,6 +21,9 @@ RectangleProperties {
             Layout.fillWidth: true
             Layout.leftMargin: 10
             Layout.rightMargin: 10
+
+            onValueChanged: SingletonEffects.hueSatHue = value
+            Component.onCompleted: SingletonEffects.hueSatHue = startValue
         }
 
         TextSliderProperty {
@@ -33,6 +37,9 @@ RectangleProperties {
             Layout.fillWidth: true
             Layout.leftMargin: 10
             Layout.rightMargin: 10
+
+            onValueChanged: SingletonEffects.hueSatSaturation = value
+            Component.onCompleted: SingletonEffects.hueSatSaturation = startValue
         }
 
         TextSliderProperty {
@@ -46,6 +53,9 @@ RectangleProperties {
             Layout.fillWidth: true
             Layout.leftMargin: 10
             Layout.rightMargin: 10
+
+            onValueChanged: SingletonEffects.hueSatLightness = value
+            Component.onCompleted: SingletonEffects.hueSatLightness = startValue
         }
     }
 }

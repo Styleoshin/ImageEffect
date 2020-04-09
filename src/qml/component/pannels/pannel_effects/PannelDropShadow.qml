@@ -1,6 +1,7 @@
 import QtQuick 2.0
 import QtQuick.Layouts 1.3
 import "../../properties"
+import "../../../Singleton"
 
 RectangleProperties {
     id: rectMain
@@ -17,6 +18,9 @@ RectangleProperties {
             Layout.fillWidth: true
             Layout.leftMargin: 10
             Layout.rightMargin: 10
+
+            onColorChanged: SingletonEffects.drShadowColor = color
+            Component.onCompleted: SingletonEffects.drShadowColor = colorDefault
         }
 
         TextSliderProperty {
@@ -30,6 +34,9 @@ RectangleProperties {
             Layout.fillWidth: true
             Layout.leftMargin: 10
             Layout.rightMargin: 10
+
+            onValueChanged: SingletonEffects.drShadowRadius = value
+            Component.onCompleted: SingletonEffects.drShadowRadius = startValue
         }
 
         TextSliderProperty {
@@ -43,6 +50,9 @@ RectangleProperties {
             Layout.fillWidth: true
             Layout.leftMargin: 10
             Layout.rightMargin: 10
+
+            onValueChanged: SingletonEffects.drShadowSamples = value
+            Component.onCompleted: SingletonEffects.drShadowSamples = startValue
         }
 
         TextSliderProperty {
@@ -56,6 +66,9 @@ RectangleProperties {
             Layout.fillWidth: true
             Layout.leftMargin: 10
             Layout.rightMargin: 10
+
+            onValueChanged: SingletonEffects.drShadowSpread = value
+            Component.onCompleted: SingletonEffects.drShadowSpread = startValue
         }
 
         TextSpinBoxProperty {
@@ -69,6 +82,9 @@ RectangleProperties {
             Layout.fillWidth: true
             Layout.leftMargin: 10
             Layout.rightMargin: 10
+
+            onValueChanged: SingletonEffects.drShadowHorizontal = value
+            Component.onCompleted: SingletonEffects.drShadowHorizontal = startValue
         }
 
         TextSpinBoxProperty {
@@ -82,6 +98,9 @@ RectangleProperties {
             Layout.fillWidth: true
             Layout.leftMargin: 10
             Layout.rightMargin: 10
+
+            onValueChanged: SingletonEffects.drShadowVertical = value
+            Component.onCompleted: SingletonEffects.drShadowVertical = startValue
         }
 
         TextCheckboxProperty {
@@ -91,6 +110,9 @@ RectangleProperties {
             Layout.fillWidth: true
             Layout.leftMargin: 10
             Layout.rightMargin: 10
+
+            onCheckStateChanged: SingletonEffects.drShadowTransparentBorder = checkState
+            Component.onCompleted: SingletonEffects.drShadowTransparentBorder = checkStateDefault
         }
     }
 }

@@ -1,6 +1,7 @@
 import QtQuick 2.0
 import QtQuick.Layouts 1.3
 import "../../properties"
+import "../../../Singleton"
 
 RectangleProperties {
     id: rectMain
@@ -21,6 +22,9 @@ RectangleProperties {
             Layout.fillWidth: true
             Layout.leftMargin: 10
             Layout.rightMargin: 10
+
+            onValueChanged: SingletonEffects.gsBlurRadius = value
+            Component.onCompleted: SingletonEffects.gsBlurRadius = startValue
         }
 
         TextSpinBoxProperty {
@@ -34,6 +38,9 @@ RectangleProperties {
             Layout.fillWidth: true
             Layout.leftMargin: 10
             Layout.rightMargin: 10
+
+            onValueChanged: SingletonEffects.gsBlurSamples = value
+            Component.onCompleted: SingletonEffects.gsBlurSamples = startValue
         }
 
         TextSpinBoxProperty {
@@ -47,6 +54,9 @@ RectangleProperties {
             Layout.fillWidth: true
             Layout.leftMargin: 10
             Layout.rightMargin: 10
+
+            onValueChanged: SingletonEffects.gsBlurDeviation = value
+            Component.onCompleted: SingletonEffects.gsBlurDeviation = startValue
         }
 
         TextCheckboxProperty {
@@ -56,6 +66,9 @@ RectangleProperties {
             Layout.fillWidth: true
             Layout.leftMargin: 10
             Layout.rightMargin: 10
+
+            onCheckStateChanged: SingletonEffects.gsBlurTransparentBorder = checkState
+            Component.onCompleted: SingletonEffects.gsBlurTransparentBorder = checkStateDefault
         }
     }
 }

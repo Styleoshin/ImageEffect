@@ -1,6 +1,7 @@
 import QtQuick 2.0
 import QtQuick.Layouts 1.3
 import "../../properties"
+import "../../../Singleton"
 
 RectangleProperties {
     id: rectMain
@@ -20,6 +21,9 @@ RectangleProperties {
             Layout.fillWidth: true
             Layout.leftMargin: 10
             Layout.rightMargin: 10
+
+            onValueChanged: SingletonEffects.zoomSamples = value
+            Component.onCompleted: SingletonEffects.zoomSamples = startValue
         }
 
         TextSpinBoxProperty {
@@ -33,6 +37,9 @@ RectangleProperties {
             Layout.fillWidth: true
             Layout.leftMargin: 10
             Layout.rightMargin: 10
+
+            onValueChanged: SingletonEffects.zoomLenght = value
+            Component.onCompleted: SingletonEffects.zoomLenght = startValue
         }
 
         TextSpinBoxProperty {
@@ -46,6 +53,9 @@ RectangleProperties {
             Layout.fillWidth: true
             Layout.leftMargin: 10
             Layout.rightMargin: 10
+
+            onValueChanged: SingletonEffects.zoomHorizontal = value
+            Component.onCompleted: SingletonEffects.zoomHorizontal = startValue
         }
 
         TextSpinBoxProperty {
@@ -59,6 +69,9 @@ RectangleProperties {
             Layout.fillWidth: true
             Layout.leftMargin: 10
             Layout.rightMargin: 10
+
+            onValueChanged: SingletonEffects.zoomVertical = value
+            Component.onCompleted: SingletonEffects.zoomVertical = startValue
         }
 
         TextCheckboxProperty {
@@ -68,6 +81,9 @@ RectangleProperties {
             Layout.fillWidth: true
             Layout.leftMargin: 10
             Layout.rightMargin: 10
+
+            onCheckStateChanged: SingletonEffects.zoomTransparentBorder = checkState
+            Component.onCompleted: SingletonEffects.zoomTransparentBorder = checkStateDefault
         }
     }
 }

@@ -4,6 +4,7 @@ import QtQuick.Controls 2.14
 import QtQuick.Controls.Material 2.12
 import "pannel_effects"
 import "../properties"
+import "../../Singleton"
 
 Rectangle {
     id: rectMain
@@ -51,6 +52,9 @@ Rectangle {
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
                 Layout.fillWidth: true
+
+                onValueChanged: SingletonEffects.glowRadius = value
+                Component.onCompleted: SingletonEffects.glowRadius = startValue
             }
 
             TextSliderProperty {
@@ -64,6 +68,9 @@ Rectangle {
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
                 Layout.fillWidth: true
+
+                onValueChanged: SingletonEffects.glowSamples = value
+                Component.onCompleted: SingletonEffects.glowSamples = startValue
             }
 
             TextSliderProperty {
@@ -77,14 +84,21 @@ Rectangle {
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
                 Layout.fillWidth: true
+
+                onValueChanged: SingletonEffects.glowSpread = value
+                Component.onCompleted: SingletonEffects.glowSpread = startValue
             }
 
             TextColorProperty{
                 nameOption: qsTr("Color:")
                 colorDefault: "white"
+
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
                 Layout.fillWidth: true
+
+                onColorChanged: SingletonEffects.glowColor = color
+                Component.onCompleted: SingletonEffects.glowColor = colorDefault
             }
 
             TextCheckboxProperty {
@@ -94,6 +108,9 @@ Rectangle {
                 Layout.fillWidth: true
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
+
+                onCheckStateChanged: SingletonEffects.glowTransparentBorder = checkState
+                Component.onCompleted: SingletonEffects.glowTransparentBorder = checkStateDefault
             }
         }
     }

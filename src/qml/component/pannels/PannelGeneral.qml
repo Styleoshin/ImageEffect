@@ -2,6 +2,7 @@ import QtQuick 2.0
 import QtQuick.Layouts 1.3
 import "pannel_effects"
 import "../properties"
+import "../../Singleton"
 
 Rectangle {
     id: rectMain
@@ -48,6 +49,9 @@ Rectangle {
                 Layout.fillWidth: true
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
+
+                onValueChanged: SingletonEffects.brightness = value
+                Component.onCompleted: SingletonEffects.brightness = startValue
             }
 
             TextSliderProperty {
@@ -61,6 +65,9 @@ Rectangle {
                 Layout.fillWidth: true
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
+
+                onValueChanged: SingletonEffects.contrast = value
+                Component.onCompleted: SingletonEffects.contrast = startValue
             }
 
             TextSliderProperty {
@@ -74,6 +81,9 @@ Rectangle {
                 Layout.fillWidth: true
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
+
+                onValueChanged: SingletonEffects.desaturate = value
+                Component.onCompleted: SingletonEffects.desaturate = startValue
             }
 
             TextSliderProperty {
@@ -87,6 +97,9 @@ Rectangle {
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
                 Layout.fillWidth: true
+
+                onValueChanged: SingletonEffects.luminance = value
+                Component.onCompleted: SingletonEffects.luminance = startValue
             }
 
             TextColorProperty{
@@ -96,6 +109,9 @@ Rectangle {
                 Layout.fillWidth: true
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
+
+                onColorChanged: SingletonEffects.colorOverlay = color
+                Component.onCompleted: SingletonEffects.colorOverlay = colorDefault
             }
         }
     }

@@ -4,6 +4,7 @@ import QtQuick.Controls 2.14
 import QtQuick.Controls.Material 2.12
 import "pannel_effects"
 import "../properties"
+import "../../Singleton"
 
 Rectangle {
     id: rectMain
@@ -46,6 +47,9 @@ Rectangle {
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
                 Layout.fillWidth: true
+
+                onValueChanged: SingletonEffects.lvlAdjustGamma = value
+                Component.onCompleted: SingletonEffects.lvlAdjustGamma = startValue
             }
 
             TextColorProperty{
@@ -55,6 +59,9 @@ Rectangle {
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
                 Layout.fillWidth: true
+
+                onColorChanged: SingletonEffects.lvlAdjustMinI = color
+                Component.onCompleted: SingletonEffects.lvlAdjustMinI = colorDefault
             }
 
             TextColorProperty{
@@ -64,6 +71,9 @@ Rectangle {
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
                 Layout.fillWidth: true
+
+                onColorChanged: SingletonEffects.lvlAdjustMaxI = color
+                Component.onCompleted: SingletonEffects.lvlAdjustMaxI = colorDefault
             }
 
             TextColorProperty{
@@ -73,6 +83,9 @@ Rectangle {
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
                 Layout.fillWidth: true
+
+                onColorChanged: SingletonEffects.lvlAdjustMinO = color
+                Component.onCompleted: SingletonEffects.lvlAdjustMinO = colorDefault
             }
 
             TextColorProperty{
@@ -82,6 +95,9 @@ Rectangle {
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
                 Layout.fillWidth: true
+
+                onColorChanged: SingletonEffects.lvlAdjustMaxO = color
+                Component.onCompleted: SingletonEffects.lvlAdjustMaxO = colorDefault
             }
         }
     }
