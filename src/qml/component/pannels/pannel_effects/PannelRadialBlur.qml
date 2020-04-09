@@ -37,7 +37,7 @@ RectangleProperties {
         }
 
         TextSpinBoxProperty {
-            nameOption: qsTr("Horizental offset:")
+            nameOption: qsTr("Horizontal offset:")
 
             minimumValue: -10000
             maximumValue: 10000
