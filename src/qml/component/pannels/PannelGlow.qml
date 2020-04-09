@@ -81,6 +81,7 @@ Rectangle {
 
             TextColorProperty{
                 nameOption: qsTr("Color:")
+                colorDefault: "white"
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
                 Layout.fillWidth: true
