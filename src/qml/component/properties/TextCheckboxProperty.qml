@@ -25,18 +25,19 @@ Item {
 
         MouseArea {
             anchors.fill: parent
-            onClicked: checkState = checkStateDefault
+            onClicked: element.checkState = element.checkStateDefault
         }
     }
 
     CheckBox {
         id: checkBox
+        checked: element.checkState
 
         anchors {
             horizontalCenter: parent.horizontalCenter
             verticalCenter: parent.verticalCenter
         }
 
-        onCheckedChanged: checkState = (checkState === Qt.Checked)? true:false
+        onCheckedChanged: element.checkState = checked
     }
 }
