@@ -15,6 +15,11 @@ Rectangle {
         onLoaded: btnMirror.visible = true
     }
 
+    Effects {
+        anchors.fill: imgSource
+        imgSource: imgSource
+    }
+
     Button {
         id: btnMirror
 
