@@ -86,6 +86,7 @@ RectangleProperties {
 
         TextCheckboxProperty {
             nameOption: qsTr("Fast rendering:")
+            checkStateDefault: false
 
             Layout.fillWidth: true
             Layout.leftMargin: 10

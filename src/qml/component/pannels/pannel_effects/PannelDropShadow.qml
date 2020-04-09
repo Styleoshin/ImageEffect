@@ -86,6 +86,7 @@ RectangleProperties {
 
         TextCheckboxProperty {
             nameOption: qsTr("Transparent border:")
+            checkStateDefault: true
 
             Layout.fillWidth: true
             Layout.leftMargin: 10
