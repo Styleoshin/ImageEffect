@@ -85,14 +85,6 @@ RectangleProperties {
         }
 
         TextCheckboxProperty {
-            nameOption: qsTr("Transparent border:")
-
-            Layout.fillWidth: true
-            Layout.leftMargin: 10
-            Layout.rightMargin: 10
-        }
-
-        TextCheckboxProperty {
             nameOption: qsTr("Fast rendering:")
 
             Layout.fillWidth: true

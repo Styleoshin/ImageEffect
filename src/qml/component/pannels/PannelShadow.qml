@@ -66,8 +66,8 @@ Rectangle {
                 states: State {
                     name: "showInnerShadow"
                     PropertyChanges { target: dropShadow; clip:true; Layout.preferredHeight:0 }
-                    PropertyChanges { target: innerShadow; clip:false; Layout.preferredHeight:310 }
-                    PropertyChanges { target: rectProperty; height:380 }
+                    PropertyChanges { target: innerShadow; clip:false; Layout.preferredHeight:270 }
+                    PropertyChanges { target: rectProperty; height:340 }
                 }
             }
         }
