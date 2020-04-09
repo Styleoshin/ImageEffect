@@ -29,7 +29,7 @@ Rectangle {
 
     RectangleProperties {
         id : rectProperty
-        implicitHeight: 170
+        implicitHeight: 200
 
         anchors {
             top: rectTitle.bottom
@@ -84,6 +84,15 @@ Rectangle {
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
                 Layout.fillWidth: true
+            }
+
+            TextCheckboxProperty {
+                nameOption: qsTr("Transparent border:")
+                checkStateDefault: true
+
+                Layout.fillWidth: true
+                Layout.leftMargin: 10
+                Layout.rightMargin: 10
             }
         }
     }
