@@ -6,7 +6,8 @@ Item {
 
     property string nameOption: ""
 
-    property bool checkState: false
+    property bool checkStateDefault: false
+    property bool checkState: checkStateDefault
 
     implicitWidth: 200
     implicitHeight: 35
@@ -20,6 +21,11 @@ Item {
         anchors {
             verticalCenter: parent.verticalCenter
             left: parent.left
+        }
+
+        MouseArea {
+            anchors.fill: parent
+            onClicked: checkState = checkStateDefault
         }
     }
 
