@@ -41,6 +41,7 @@ Rectangle {
 
             TextLvlAdjustProperty {
                 nameOption: qsTr("Gamma:")
+                startValue: Qt.vector3d(1,1,1)
 
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
@@ -58,6 +59,7 @@ Rectangle {
 
             TextColorProperty{
                 nameOption: qsTr("Maximum input:")
+                colorDefault: "#ffffffff"
 
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
@@ -75,6 +77,7 @@ Rectangle {
 
             TextColorProperty{
                 nameOption: qsTr("Maximum output:")
+                colorDefault: "#ffffffff"
 
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
