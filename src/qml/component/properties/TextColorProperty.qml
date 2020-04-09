@@ -9,8 +9,6 @@ Item {
     property color colorDefault: "#FFFFFF"
     property color color: colorDefault
 
-    signal chooseColor(string color)
-
     implicitWidth: 200
     implicitHeight: 35
 
