@@ -18,6 +18,7 @@ Item
 
         brightness: SingletonEffects.brightness
         contrast: SingletonEffects.contrast
+        cached: true
     }
     GammaAdjust {
         id: gammaAdjust
@@ -26,6 +27,7 @@ Item
         anchors.fill: element
 
         gamma: SingletonEffects.luminance
+        cached: true
     }
     Desaturate {
         id: desaturate
@@ -34,13 +36,16 @@ Item
         anchors.fill: element
 
         desaturation: SingletonEffects.desaturate
+        cached: true
     }
    ColorOverlay {
         id: colorOverlay
 
         source: desaturate
         anchors.fill: element
+
         color: SingletonEffects.colorOverlay
+        cached: true
     }
 
      // Color
@@ -53,6 +58,7 @@ Item
         hue: SingletonEffects.colorizeHue
         saturation: SingletonEffects.colorizeSaturation
         lightness: SingletonEffects.colorizeLightness
+        cached: true
     }
     HueSaturation {
         id: hueSaturation
@@ -63,6 +69,7 @@ Item
         hue: SingletonEffects.hueSatHue
         saturation: SingletonEffects.hueSatSaturation
         lightness: SingletonEffects.hueSatLightness
+        cached: true
     }
 
     // Glow
@@ -77,6 +84,7 @@ Item
         color: SingletonEffects.glowColor
         spread: SingletonEffects.glowSpread
         transparentBorder: SingletonEffects.glowTransparentBorder
+        cached: true
     }
 
     // Level Adjust
@@ -91,6 +99,7 @@ Item
         maximumOutput: SingletonEffects.lvlAdjustMaxO
         minimumInput: SingletonEffects.lvlAdjustMinI
         maximumInput: SingletonEffects.lvlAdjustMaxI
+        cached: true
     }
 
     // Shadow
@@ -107,6 +116,7 @@ Item
         horizontalOffset: SingletonEffects.drShadowHorizontal
         verticalOffset: SingletonEffects.drShadowVertical
         transparentBorder: SingletonEffects.drShadowTransparentBorder
+        cached: true
     }
     InnerShadow {
         id: innerShadow
@@ -121,6 +131,7 @@ Item
         horizontalOffset: SingletonEffects.inShadowHorizontal
         verticalOffset: SingletonEffects.inShadowVertical
         fast: SingletonEffects.inShadowFast
+        cached: true
     }
 
     // Blur
@@ -132,6 +143,7 @@ Item
 
         radius: SingletonEffects.fsBlurRadius
         transparentBorder: SingletonEffects.fsTransparentBorder
+        cached: true
     }
     GaussianBlur {
         id: gsBlur
@@ -143,6 +155,7 @@ Item
         samples: SingletonEffects.gsBlurSamples
         deviation: SingletonEffects.gsBlurDeviation
         transparentBorder: SingletonEffects.gsBlurTransparentBorder
+        cached: true
     }
 
     // Motion Blur
@@ -156,6 +169,7 @@ Item
         length: SingletonEffects.directionalLenght
         samples: SingletonEffects.directionalSamples
         transparentBorder: SingletonEffects.directionalTransparentBorder
+        cached: true
     }
     RadialBlur {
         id: radialBlur
@@ -168,6 +182,7 @@ Item
         horizontalOffset: SingletonEffects.radialHorizontal
         verticalOffset: SingletonEffects.radialVertical
         transparentBorder: SingletonEffects.radialTransparentBorder
+        cached: true
     }
     ZoomBlur {
         id: zoomBlur
@@ -180,5 +195,6 @@ Item
         horizontalOffset: SingletonEffects.zoomHorizontal
         verticalOffset: SingletonEffects.zoomVertical
         transparentBorder: SingletonEffects.zoomTransparentBorder
+        cached: true
     }
 }
