@@ -5,6 +5,7 @@ MenuBar {
     id: menuBar
 
     signal chooseImage(string path)
+    signal saveImage(string path)
 
     Menu {
         title: qsTr("&File")
@@ -14,7 +15,10 @@ MenuBar {
             onTriggered: fileDialog.open()
         }
 
-        Action { text: qsTr("Save &As...") }
+        Action {
+            text: qsTr("Save &As...")
+            onTriggered: fileDialogSave.open()
+        }
 
         MenuSeparator { }
 
@@ -36,6 +40,18 @@ MenuBar {
 
         onAccepted: {
             chooseImage(fileDialog.fileUrl.toString())
+        }
+    }
+
+    FileDialog {
+        id: fileDialogSave
+        title: qsTr("Save image")
+        folder: shortcuts.pictures
+        nameFilters: [ "Image files (*.jpg *.png)" ]
+        selectExisting: false
+
+        onAccepted: {
+            saveImage(fileDialogSave.fileUrl.toString().replace(/^(file:\/{3})/,""))
         }
     }
 }
