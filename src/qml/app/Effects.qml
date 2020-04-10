@@ -11,6 +11,8 @@ Item
 
     // General
     BrightnessContrast {
+        id: brightnessContrast
+
         source: imgSource
         anchors.fill: element
 
@@ -18,26 +20,34 @@ Item
         contrast: SingletonEffects.contrast
     }
     GammaAdjust {
-        source: imgSource
+        id: gammaAdjust
+
+        source: brightnessContrast
         anchors.fill: element
 
         gamma: SingletonEffects.luminance
     }
     Desaturate {
-        source: imgSource
+        id: desaturate
+
+        source: gammaAdjust
         anchors.fill: element
 
         desaturation: SingletonEffects.desaturate
     }
-    ColorOverlay {
-        source: imgSource
+   ColorOverlay {
+        id: colorOverlay
+
+        source: desaturate
         anchors.fill: element
         color: SingletonEffects.colorOverlay
     }
 
      // Color
     Colorize {
-        source: imgSource
+        id: colorize
+
+        source: colorOverlay
         anchors.fill: element
 
         hue: SingletonEffects.colorizeHue
@@ -45,7 +55,9 @@ Item
         lightness: SingletonEffects.colorizeLightness
     }
     HueSaturation {
-        source: imgSource
+        id: hueSaturation
+
+        source: colorize
         anchors.fill: element
 
         hue: SingletonEffects.hueSatHue
@@ -55,7 +67,9 @@ Item
 
     // Glow
     Glow {
-        source: imgSource
+        id: glow
+
+        source: hueSaturation
         anchors.fill: element
 
         radius: SingletonEffects.glowRadius
@@ -67,7 +81,9 @@ Item
 
     // Level Adjust
     LevelAdjust {
-        source: imgSource
+        id: levelAdjust
+
+        source: hueSaturation
         anchors.fill: element
 
         gamma: SingletonEffects.lvlAdjustGamma
@@ -79,7 +95,9 @@ Item
 
     // Shadow
     DropShadow {
-        source: imgSource
+        id: dropShadow
+
+        source: levelAdjust
         anchors.fill: element
 
         color: SingletonEffects.drShadowColor
@@ -91,7 +109,9 @@ Item
         transparentBorder: SingletonEffects.drShadowTransparentBorder
     }
     InnerShadow {
-        source: imgSource
+        id: innerShadow
+
+        source: dropShadow
         anchors.fill: element
 
         color: SingletonEffects.inShadowColor
@@ -105,14 +125,18 @@ Item
 
     // Blur
     FastBlur {
-        source: imgSource
+        id: fsBlur
+
+        source: innerShadow
         anchors.fill: element
 
         radius: SingletonEffects.fsBlurRadius
         transparentBorder: SingletonEffects.fsTransparentBorder
     }
     GaussianBlur {
-        source: imgSource
+        id: gsBlur
+
+        source: fsBlur
         anchors.fill: element
 
         radius: SingletonEffects.gsBlurRadius
@@ -123,7 +147,9 @@ Item
 
     // Motion Blur
     DirectionalBlur {
-        source: imgSource
+        id: directionalBlur
+
+        source: gsBlur
         anchors.fill: element
 
         angle: SingletonEffects.directionalAngle
@@ -132,7 +158,9 @@ Item
         transparentBorder: SingletonEffects.directionalTransparentBorder
     }
     RadialBlur {
-        source: imgSource
+        id: radialBlur
+
+        source: directionalBlur
         anchors.fill: element
 
         samples: SingletonEffects.radialSamples
@@ -142,7 +170,9 @@ Item
         transparentBorder: SingletonEffects.radialTransparentBorder
     }
     ZoomBlur {
-        source: imgSource
+        id: zoomBlur
+
+        source: radialBlur
         anchors.fill: element
 
         samples: SingletonEffects.zoomSamples
