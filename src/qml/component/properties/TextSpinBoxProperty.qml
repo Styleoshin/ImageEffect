@@ -10,6 +10,7 @@ Item {
     property real defaultValue: 0.5
     property real step: 0.01
     property real value: defaultValue
+    property int decimals: 2
 
     implicitWidth: 200
     implicitHeight: 35
@@ -37,12 +38,13 @@ Item {
 
     SpinBoxFloat {
         id: spinBox
-        width: 180
+        width: 140
         editable: true
         minimumValue: element.minimumValue
         maximumValue: element.maximumValue
         defaultValue: element.defaultValue
         step: element.step
+        decimals: element.decimals
 
         onValueChanged: element.value = value / 100
 
