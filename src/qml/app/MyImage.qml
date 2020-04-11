@@ -9,6 +9,7 @@ Image {
     source: imageSource
     mipmap: true
     antialiasing: true
+    smooth: true
 
     sourceSize {
         height: 1024
