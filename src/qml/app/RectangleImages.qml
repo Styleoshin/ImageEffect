@@ -16,6 +16,8 @@ Rectangle {
     }
 
     Effects {
+        id: effects
+
         anchors.fill: imgSource
         imgSource: imgSource
     }
@@ -34,5 +36,11 @@ Rectangle {
         }
 
         onClicked: imgSource.mirror = (imgSource.mirror)? false:true
+    }
+
+    function saveImage(path) {
+        effects.grabToImage(function(image) {
+            image.saveToFile(path);
+        });
     }
 }

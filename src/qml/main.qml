@@ -14,11 +14,12 @@ ApplicationWindow {
     menuBar: MyMenuBar{
         id: menuBar
         onChooseImage: rectImages.imageSource = path
+        onSaveImage: rectImages.saveImage(path)
     }
 
     RectangleImages {
-
         id: rectImages
+
         anchors {
             top: menuBar.bottom
             topMargin: 20
