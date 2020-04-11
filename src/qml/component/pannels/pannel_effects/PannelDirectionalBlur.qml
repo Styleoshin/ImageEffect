@@ -50,6 +50,7 @@ RectangleProperties {
             maximumValue: 1000
             step: 25
             defaultValue: 0
+            decimals: 0
 
             Layout.fillWidth: true
             Layout.leftMargin: 10

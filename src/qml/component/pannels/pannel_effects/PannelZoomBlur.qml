@@ -33,6 +33,7 @@ RectangleProperties {
             maximumValue: 10000
             step: 100
             defaultValue: 0
+            decimals: 0
 
             Layout.fillWidth: true
             Layout.leftMargin: 10
@@ -49,6 +50,7 @@ RectangleProperties {
             maximumValue: 1000
             step: 50
             defaultValue: 0
+            decimals: 0
 
             Layout.fillWidth: true
             Layout.leftMargin: 10
@@ -65,6 +67,7 @@ RectangleProperties {
             maximumValue: 1000
             step: 50
             defaultValue: 0
+            decimals: 0
 
             Layout.fillWidth: true
             Layout.leftMargin: 10

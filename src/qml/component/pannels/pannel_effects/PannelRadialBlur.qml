@@ -50,6 +50,7 @@ RectangleProperties {
             maximumValue: 1000
             step: 50
             defaultValue: 0
+            decimals: 0
 
             Layout.fillWidth: true
             Layout.leftMargin: 10
@@ -66,6 +67,7 @@ RectangleProperties {
             maximumValue: 1000
             step: 50
             defaultValue: 0
+            decimals: 0
 
             Layout.fillWidth: true
             Layout.leftMargin: 10
@@ -75,7 +77,7 @@ RectangleProperties {
             Component.onCompleted: SingletonEffects.radialVertical = defaultValue
         }
 
-        /*TextCheckboxProperty {
+       /* TextCheckboxProperty {
             nameOption: qsTr("Transparent border:")
             checkStateDefault: false
 
