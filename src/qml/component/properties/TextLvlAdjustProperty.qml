@@ -27,9 +27,9 @@ Item {
         MouseArea {
             anchors.fill: parent
             onDoubleClicked: {
-                sb1.value = element.startValue.x
-                sb2.value = element.startValue.y
-                sb3.value = element.startValue.z
+                sb1.value = element.startValue.x * 100
+                sb2.value = element.startValue.y * 100
+                sb3.value = element.startValue.z * 100
             }
         }
     }
