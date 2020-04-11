@@ -60,7 +60,7 @@ Item {
     SpinBoxFloat {
         id: spinBox
 
-        width: 130
+        width: 140
         editable: true
         minimumValue: element.minimumValue
         maximumValue: element.maximumValue
