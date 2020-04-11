@@ -17,14 +17,14 @@ RectangleProperties {
             minimumValue: -180
             maximumValue: 180
             step: 1
-            startValue: 0
+            defaultValue: 0
 
             Layout.fillWidth: true
             Layout.leftMargin: 10
             Layout.rightMargin: 10
 
             onValueChanged: SingletonEffects.directionalAngle = value
-            Component.onCompleted: SingletonEffects.directionalAngle = startValue
+            Component.onCompleted: SingletonEffects.directionalAngle = defaultValue
         }
 
         TextSliderProperty {
@@ -33,14 +33,14 @@ RectangleProperties {
             minimumValue: 0
             maximumValue: 100
             step: 5
-            startValue: 0
+            defaultValue: 0
 
             Layout.fillWidth: true
             Layout.leftMargin: 10
             Layout.rightMargin: 10
 
             onValueChanged: SingletonEffects.directionalSamples = value
-            Component.onCompleted: SingletonEffects.directionalSamples = startValue
+            Component.onCompleted: SingletonEffects.directionalSamples = defaultValue
         }
 
         TextSpinBoxProperty {
@@ -49,14 +49,14 @@ RectangleProperties {
             minimumValue: 0
             maximumValue: 1000
             step: 25
-            startValue: 0
+            defaultValue: 0
 
             Layout.fillWidth: true
             Layout.leftMargin: 10
             Layout.rightMargin: 10
 
             onValueChanged: SingletonEffects.directionalLenght = value
-            Component.onCompleted: SingletonEffects.directionalLenght = startValue
+            Component.onCompleted: SingletonEffects.directionalLenght = defaultValue
         }
 
         TextCheckboxProperty {

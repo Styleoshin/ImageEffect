@@ -7,9 +7,9 @@ Item {
     property string nameOption: ""
     property int minimumValue: 0
     property int maximumValue: 1
-    property real startValue: 0.5
+    property real defaultValue: 0.5
     property real step: 0.01
-    property real value: startValue
+    property real value: defaultValue
 
     implicitWidth: 200
     implicitHeight: 35
@@ -29,8 +29,8 @@ Item {
             anchors.fill: parent
             onDoubleClicked:
             {
-                spinBox.value = element.startValue * 100
-                element.value = element.startValue
+                spinBox.value = element.defaultValue * 100
+                element.value = element.defaultValue
             }
         }
     }
@@ -42,7 +42,7 @@ Item {
         height: 10
         from: element.minimumValue
         to: element.maximumValue
-        value: element.startValue
+        value: element.defaultValue
         stepSize: element.step
         onValueChanged:
         {
@@ -107,7 +107,7 @@ Item {
         editable: true
         minimumValue: element.minimumValue
         maximumValue: element.maximumValue
-        startValue: element.startValue
+        defaultValue: element.defaultValue
         step: element.step
 
         anchors {

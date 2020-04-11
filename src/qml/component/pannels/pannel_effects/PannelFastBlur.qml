@@ -17,14 +17,14 @@ RectangleProperties {
             minimumValue: 0
             maximumValue: 64
             step: 1
-            startValue: 0
+            defaultValue: 0
 
             Layout.fillWidth: true
             Layout.leftMargin: 10
             Layout.rightMargin: 10
 
             onValueChanged: SingletonEffects.fsBlurRadius = value
-            Component.onCompleted: SingletonEffects.fsBlurRadius = startValue
+            Component.onCompleted: SingletonEffects.fsBlurRadius = defaultValue
         }
 
         TextCheckboxProperty {

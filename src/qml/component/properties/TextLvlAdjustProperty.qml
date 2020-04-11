@@ -7,8 +7,8 @@ Item {
     id: element
 
     property string nameOption: ""
-    property variant startValue: Qt.vector3d(0,0,0)
-    property variant value: startValue
+    property variant defaultValue: Qt.vector3d(0,0,0)
+    property variant value: defaultValue
 
     implicitWidth: 200
     implicitHeight: 35
@@ -27,9 +27,9 @@ Item {
         MouseArea {
             anchors.fill: parent
             onDoubleClicked: {
-                sb1.value = element.startValue.x * 100
-                sb2.value = element.startValue.y * 100
-                sb3.value = element.startValue.z * 100
+                sb1.value = element.defaultValue.x * 100
+                sb2.value = element.defaultValue.y * 100
+                sb3.value = element.defaultValue.z * 100
             }
         }
     }
@@ -49,7 +49,7 @@ Item {
             minimumValue: 0
             maximumValue: 20
             step: 0.5
-            startValue: element.startValue.x
+            defaultValue: element.defaultValue.x
 
             Layout.preferredWidth: 50
             onValueChanged: element.value.x = value / 100
@@ -64,7 +64,7 @@ Item {
             minimumValue: 0
             maximumValue: 20
             step: 0.5
-            startValue: element.startValue.y
+            defaultValue: element.defaultValue.y
 
             Layout.preferredWidth: 50
             onValueChanged: element.value.y = value / 100
@@ -79,7 +79,7 @@ Item {
             minimumValue: 0
             maximumValue: 20
             step: 0.5
-            startValue: element.startValue.z
+            defaultValue: element.defaultValue.z
 
             Layout.preferredWidth: 50
             onValueChanged: element.value.z = value /100

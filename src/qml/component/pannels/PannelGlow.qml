@@ -47,14 +47,14 @@ Rectangle {
                 minimumValue: 0
                 maximumValue: 100
                 step: 1
-                startValue: 1
+                defaultValue: 1
 
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
                 Layout.fillWidth: true
 
                 onValueChanged: SingletonEffects.glowRadius = value
-                Component.onCompleted: SingletonEffects.glowRadius = startValue
+                Component.onCompleted: SingletonEffects.glowRadius = defaultValue
             }
 
             TextSliderProperty {
@@ -63,14 +63,14 @@ Rectangle {
                 minimumValue: 0
                 maximumValue: 100
                 step: 1
-                startValue: 9
+                defaultValue: 9
 
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
                 Layout.fillWidth: true
 
                 onValueChanged: SingletonEffects.glowSamples = value
-                Component.onCompleted: SingletonEffects.glowSamples = startValue
+                Component.onCompleted: SingletonEffects.glowSamples = defaultValue
             }
 
             TextSliderProperty {
@@ -79,14 +79,14 @@ Rectangle {
                 minimumValue: 0
                 maximumValue: 1
                 step: 0.01
-                startValue: 0.5
+                defaultValue: 0.5
 
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
                 Layout.fillWidth: true
 
                 onValueChanged: SingletonEffects.glowSpread = value
-                Component.onCompleted: SingletonEffects.glowSpread = startValue
+                Component.onCompleted: SingletonEffects.glowSpread = defaultValue
             }
 
             TextColorProperty{

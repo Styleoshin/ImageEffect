@@ -44,14 +44,14 @@ Rectangle {
                 minimumValue: -1
                 maximumValue: 1
                 step: 0.01
-                startValue: 0
+                defaultValue: 0
 
                 Layout.fillWidth: true
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
 
                 onValueChanged: SingletonEffects.brightness = value
-                Component.onCompleted: SingletonEffects.brightness = startValue
+                Component.onCompleted: SingletonEffects.brightness = defaultValue
             }
 
             TextSliderProperty {
@@ -60,14 +60,14 @@ Rectangle {
                 minimumValue: -1
                 maximumValue: 1
                 step: 0.01
-                startValue: 0
+                defaultValue: 0
 
                 Layout.fillWidth: true
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
 
                 onValueChanged: SingletonEffects.contrast = value
-                Component.onCompleted: SingletonEffects.contrast = startValue
+                Component.onCompleted: SingletonEffects.contrast = defaultValue
             }
 
             TextSliderProperty {
@@ -76,14 +76,14 @@ Rectangle {
                 minimumValue: 0
                 maximumValue: 1
                 step: 0.01
-                startValue: 0
+                defaultValue: 0
 
                 Layout.fillWidth: true
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
 
                 onValueChanged: SingletonEffects.desaturate = value
-                Component.onCompleted: SingletonEffects.desaturate = startValue
+                Component.onCompleted: SingletonEffects.desaturate = defaultValue
             }
 
             TextSliderProperty {
@@ -92,14 +92,14 @@ Rectangle {
                 minimumValue: 0
                 maximumValue: 99
                 step: 1
-                startValue: 1
+                defaultValue: 1
 
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
                 Layout.fillWidth: true
 
                 onValueChanged: SingletonEffects.luminance = value
-                Component.onCompleted: SingletonEffects.luminance = startValue
+                Component.onCompleted: SingletonEffects.luminance = defaultValue
             }
 
             TextColorProperty{

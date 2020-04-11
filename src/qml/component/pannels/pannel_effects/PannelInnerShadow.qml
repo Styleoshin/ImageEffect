@@ -29,14 +29,14 @@ RectangleProperties {
             minimumValue: 0
             maximumValue: 100
             step: 5
-            startValue: 0
+            defaultValue: 0
 
             Layout.fillWidth: true
             Layout.leftMargin: 10
             Layout.rightMargin: 10
 
             onValueChanged: SingletonEffects.inShadowRadius = value
-            Component.onCompleted: SingletonEffects.inShadowRadius = startValue
+            Component.onCompleted: SingletonEffects.inShadowRadius = defaultValue
         }
 
         TextSliderProperty {
@@ -45,14 +45,14 @@ RectangleProperties {
             minimumValue: 0
             maximumValue: 32
             step: 1
-            startValue: 0
+            defaultValue: 0
 
             Layout.fillWidth: true
             Layout.leftMargin: 10
             Layout.rightMargin: 10
 
             onValueChanged: SingletonEffects.inShadowSamples = value
-            Component.onCompleted: SingletonEffects.inShadowSamples = startValue
+            Component.onCompleted: SingletonEffects.inShadowSamples = defaultValue
         }
 
         TextSliderProperty {
@@ -61,14 +61,14 @@ RectangleProperties {
             minimumValue: 0
             maximumValue: 1
             step: 0.01
-            startValue: 0.5
+            defaultValue: 0.5
 
             Layout.fillWidth: true
             Layout.leftMargin: 10
             Layout.rightMargin: 10
 
             onValueChanged: SingletonEffects.inShadowSpread = value
-            Component.onCompleted: SingletonEffects.inShadowSpread = startValue
+            Component.onCompleted: SingletonEffects.inShadowSpread = defaultValue
         }
 
         TextSpinBoxProperty {
@@ -77,14 +77,14 @@ RectangleProperties {
             minimumValue: -2000
             maximumValue: 2000
             step: 50
-            startValue: 0
+            defaultValue: 0
 
             Layout.fillWidth: true
             Layout.leftMargin: 10
             Layout.rightMargin: 10
 
             onValueChanged: SingletonEffects.inShadowHorizontal = value
-            Component.onCompleted: SingletonEffects.inShadowHorizontal = startValue
+            Component.onCompleted: SingletonEffects.inShadowHorizontal = defaultValue
         }
 
         TextSpinBoxProperty {
@@ -93,14 +93,14 @@ RectangleProperties {
             minimumValue: -2000
             maximumValue: 2000
             step: 50
-            startValue: 0
+            defaultValue: 0
 
             Layout.fillWidth: true
             Layout.leftMargin: 10
             Layout.rightMargin: 10
 
             onValueChanged: SingletonEffects.inShadowVertical = value
-            Component.onCompleted: SingletonEffects.inShadowVertical = startValue
+            Component.onCompleted: SingletonEffects.inShadowVertical = defaultValue
         }
 
         TextCheckboxProperty {

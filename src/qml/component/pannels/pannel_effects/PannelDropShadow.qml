@@ -29,14 +29,14 @@ RectangleProperties {
             minimumValue: 0
             maximumValue: 100
             step: 5
-            startValue: 0
+            defaultValue: 0
 
             Layout.fillWidth: true
             Layout.leftMargin: 10
             Layout.rightMargin: 10
 
             onValueChanged: SingletonEffects.drShadowRadius = value
-            Component.onCompleted: SingletonEffects.drShadowRadius = startValue
+            Component.onCompleted: SingletonEffects.drShadowRadius = defaultValue
         }
 
         TextSliderProperty {
@@ -45,14 +45,14 @@ RectangleProperties {
             minimumValue: 0
             maximumValue: 100
             step: 10
-            startValue: 9
+            defaultValue: 9
 
             Layout.fillWidth: true
             Layout.leftMargin: 10
             Layout.rightMargin: 10
 
             onValueChanged: SingletonEffects.drShadowSamples = value
-            Component.onCompleted: SingletonEffects.drShadowSamples = startValue
+            Component.onCompleted: SingletonEffects.drShadowSamples = defaultValue
         }
 
         TextSliderProperty {
@@ -61,14 +61,14 @@ RectangleProperties {
             minimumValue: 0
             maximumValue: 1
             step: 0.01
-            startValue: 0
+            defaultValue: 0
 
             Layout.fillWidth: true
             Layout.leftMargin: 10
             Layout.rightMargin: 10
 
             onValueChanged: SingletonEffects.drShadowSpread = value
-            Component.onCompleted: SingletonEffects.drShadowSpread = startValue
+            Component.onCompleted: SingletonEffects.drShadowSpread = defaultValue
         }
 
         TextSliderProperty {
@@ -77,14 +77,14 @@ RectangleProperties {
             minimumValue: -50
             maximumValue: 50
             step: 5
-            startValue: 0
+            defaultValue: 0
 
             Layout.fillWidth: true
             Layout.leftMargin: 10
             Layout.rightMargin: 10
 
             onValueChanged: SingletonEffects.drShadowHorizontal = value
-            Component.onCompleted: SingletonEffects.drShadowHorizontal = startValue
+            Component.onCompleted: SingletonEffects.drShadowHorizontal = defaultValue
         }
 
         TextSliderProperty {
@@ -93,14 +93,14 @@ RectangleProperties {
             minimumValue: -50
             maximumValue: 50
             step: 5
-            startValue: 0
+            defaultValue: 0
 
             Layout.fillWidth: true
             Layout.leftMargin: 10
             Layout.rightMargin: 10
 
             onValueChanged: SingletonEffects.drShadowVertical = value
-            Component.onCompleted: SingletonEffects.drShadowVertical = startValue
+            Component.onCompleted: SingletonEffects.drShadowVertical = defaultValue
         }
 
         TextCheckboxProperty {

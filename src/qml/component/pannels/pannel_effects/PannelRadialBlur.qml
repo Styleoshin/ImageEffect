@@ -17,14 +17,14 @@ RectangleProperties {
             minimumValue: 0
             maximumValue: 360
             step: 1
-            startValue: 0
+            defaultValue: 0
 
             Layout.fillWidth: true
             Layout.leftMargin: 10
             Layout.rightMargin: 10
 
             onValueChanged: SingletonEffects.radialAngle = value
-            Component.onCompleted: SingletonEffects.radialAngle = startValue
+            Component.onCompleted: SingletonEffects.radialAngle = defaultValue
         }
 
         TextSliderProperty {
@@ -33,14 +33,14 @@ RectangleProperties {
             minimumValue: 0
             maximumValue: 100
             step: 5
-            startValue: 0
+            defaultValue: 0
 
             Layout.fillWidth: true
             Layout.leftMargin: 10
             Layout.rightMargin: 10
 
             onValueChanged: SingletonEffects.radialSamples = value
-            Component.onCompleted: SingletonEffects.radialSamples = startValue
+            Component.onCompleted: SingletonEffects.radialSamples = defaultValue
         }
 
         TextSpinBoxProperty {
@@ -49,14 +49,14 @@ RectangleProperties {
             minimumValue: -1000
             maximumValue: 1000
             step: 50
-            startValue: 0
+            defaultValue: 0
 
             Layout.fillWidth: true
             Layout.leftMargin: 10
             Layout.rightMargin: 10
 
             onValueChanged: SingletonEffects.radialHorizontal = value
-            Component.onCompleted: SingletonEffects.radialHorizontal = startValue
+            Component.onCompleted: SingletonEffects.radialHorizontal = defaultValue
         }
 
         TextSpinBoxProperty {
@@ -65,17 +65,17 @@ RectangleProperties {
             minimumValue: -1000
             maximumValue: 1000
             step: 50
-            startValue: 0
+            defaultValue: 0
 
             Layout.fillWidth: true
             Layout.leftMargin: 10
             Layout.rightMargin: 10
 
             onValueChanged: SingletonEffects.radialVertical = value
-            Component.onCompleted: SingletonEffects.radialVertical = startValue
+            Component.onCompleted: SingletonEffects.radialVertical = defaultValue
         }
 
-        TextCheckboxProperty {
+        /*TextCheckboxProperty {
             nameOption: qsTr("Transparent border:")
             checkStateDefault: false
 
@@ -85,6 +85,6 @@ RectangleProperties {
 
             onCheckStateChanged: SingletonEffects.radialTransparentBorder = checkState
             Component.onCompleted: SingletonEffects.radialTransparentBorder = checkStateDefault
-        }
+        }*/
     }
 }

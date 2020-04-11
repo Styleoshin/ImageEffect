@@ -16,14 +16,14 @@ RectangleProperties {
             minimumValue: 0
             maximumValue: 100
             step: 5
-            startValue: 0
+            defaultValue: 0
 
             Layout.fillWidth: true
             Layout.leftMargin: 10
             Layout.rightMargin: 10
 
             onValueChanged: SingletonEffects.zoomSamples = value
-            Component.onCompleted: SingletonEffects.zoomSamples = startValue
+            Component.onCompleted: SingletonEffects.zoomSamples = defaultValue
         }
 
         TextSpinBoxProperty {
@@ -32,14 +32,14 @@ RectangleProperties {
             minimumValue: 0
             maximumValue: 10000
             step: 100
-            startValue: 0
+            defaultValue: 0
 
             Layout.fillWidth: true
             Layout.leftMargin: 10
             Layout.rightMargin: 10
 
             onValueChanged: SingletonEffects.zoomLenght = value
-            Component.onCompleted: SingletonEffects.zoomLenght = startValue
+            Component.onCompleted: SingletonEffects.zoomLenght = defaultValue
         }
 
         TextSpinBoxProperty {
@@ -48,14 +48,14 @@ RectangleProperties {
             minimumValue: -1000
             maximumValue: 1000
             step: 50
-            startValue: 0
+            defaultValue: 0
 
             Layout.fillWidth: true
             Layout.leftMargin: 10
             Layout.rightMargin: 10
 
             onValueChanged: SingletonEffects.zoomHorizontal = value
-            Component.onCompleted: SingletonEffects.zoomHorizontal = startValue
+            Component.onCompleted: SingletonEffects.zoomHorizontal = defaultValue
         }
 
         TextSpinBoxProperty {
@@ -64,14 +64,14 @@ RectangleProperties {
             minimumValue: -1000
             maximumValue: 1000
             step: 50
-            startValue: 0
+            defaultValue: 0
 
             Layout.fillWidth: true
             Layout.leftMargin: 10
             Layout.rightMargin: 10
 
             onValueChanged: SingletonEffects.zoomVertical = value
-            Component.onCompleted: SingletonEffects.zoomVertical = startValue
+            Component.onCompleted: SingletonEffects.zoomVertical = defaultValue
         }
 
         TextCheckboxProperty {

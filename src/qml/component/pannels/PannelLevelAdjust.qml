@@ -42,14 +42,14 @@ Rectangle {
 
             TextLvlAdjustProperty {
                 nameOption: qsTr("Gamma:")
-                startValue: Qt.vector3d(1,1,1)
+                defaultValue: Qt.vector3d(1,1,1)
 
                 Layout.leftMargin: 10
                 Layout.rightMargin: 10
                 Layout.fillWidth: true
 
                 onValueChanged: SingletonEffects.lvlAdjustGamma = value
-                Component.onCompleted: SingletonEffects.lvlAdjustGamma = startValue
+                Component.onCompleted: SingletonEffects.lvlAdjustGamma = defaultValue
             }
 
             TextColorProperty{

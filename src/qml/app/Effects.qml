@@ -49,7 +49,7 @@ Item
     }
 
      // Color
-    Colorize {
+   /* Colorize {
         id: colorize
 
         source: colorOverlay
@@ -59,11 +59,11 @@ Item
         saturation: SingletonEffects.colorizeSaturation
         lightness: SingletonEffects.colorizeLightness
         cached: true
-    }
+    }*/
     HueSaturation {
         id: hueSaturation
 
-        source: colorize
+        source: colorOverlay
         anchors.fill: element
 
         hue: SingletonEffects.hueSatHue

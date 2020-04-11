@@ -17,14 +17,14 @@ RectangleProperties {
             minimumValue: 0
             maximumValue: 100
             step: 5
-            startValue: 0
+            defaultValue: 0
 
             Layout.fillWidth: true
             Layout.leftMargin: 10
             Layout.rightMargin: 10
 
             onValueChanged: SingletonEffects.gsBlurRadius = value
-            Component.onCompleted: SingletonEffects.gsBlurRadius = startValue
+            Component.onCompleted: SingletonEffects.gsBlurRadius = defaultValue
         }
 
         TextSliderProperty {
@@ -33,14 +33,14 @@ RectangleProperties {
             minimumValue: 0
             maximumValue: 100
             step: 5
-            startValue: 9
+            defaultValue: 9
 
             Layout.fillWidth: true
             Layout.leftMargin: 10
             Layout.rightMargin: 10
 
             onValueChanged: SingletonEffects.gsBlurSamples = value
-            Component.onCompleted: SingletonEffects.gsBlurSamples = startValue
+            Component.onCompleted: SingletonEffects.gsBlurSamples = defaultValue
         }
 
         TextSliderProperty {
@@ -49,14 +49,14 @@ RectangleProperties {
             minimumValue: 0
             maximumValue: 100
             step: 5
-            startValue: 0
+            defaultValue: 0
 
             Layout.fillWidth: true
             Layout.leftMargin: 10
             Layout.rightMargin: 10
 
             onValueChanged: SingletonEffects.gsBlurDeviation = value
-            Component.onCompleted: SingletonEffects.gsBlurDeviation = startValue
+            Component.onCompleted: SingletonEffects.gsBlurDeviation = defaultValue
         }
 
         TextCheckboxProperty {

@@ -16,14 +16,14 @@ RectangleProperties {
             minimumValue: -1
             maximumValue: 1
             step: 0.01
-            startValue: 0
+            defaultValue: 0
 
             Layout.fillWidth: true
             Layout.leftMargin: 10
             Layout.rightMargin: 10
 
             onValueChanged: SingletonEffects.hueSatHue = value
-            Component.onCompleted: SingletonEffects.hueSatHue = startValue
+            Component.onCompleted: SingletonEffects.hueSatHue = defaultValue
         }
 
         TextSliderProperty {
@@ -32,14 +32,14 @@ RectangleProperties {
             minimumValue: -1
             maximumValue: 1
             step: 0.01
-            startValue: 0
+            defaultValue: 0
 
             Layout.fillWidth: true
             Layout.leftMargin: 10
             Layout.rightMargin: 10
 
             onValueChanged: SingletonEffects.hueSatSaturation = value
-            Component.onCompleted: SingletonEffects.hueSatSaturation = startValue
+            Component.onCompleted: SingletonEffects.hueSatSaturation = defaultValue
         }
 
         TextSliderProperty {
@@ -48,14 +48,14 @@ RectangleProperties {
             minimumValue: -1
             maximumValue: 1
             step: 0.01
-            startValue: 0
+            defaultValue: 0
 
             Layout.fillWidth: true
             Layout.leftMargin: 10
             Layout.rightMargin: 10
 
             onValueChanged: SingletonEffects.hueSatLightness = value
-            Component.onCompleted: SingletonEffects.hueSatLightness = startValue
+            Component.onCompleted: SingletonEffects.hueSatLightness = defaultValue
         }
     }
 }

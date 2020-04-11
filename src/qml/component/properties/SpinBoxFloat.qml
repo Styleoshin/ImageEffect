@@ -7,14 +7,14 @@ SpinBox {
     property int decimals: 2
     property int minimumValue: 0
     property int maximumValue: 1
-    property real startValue: 0.5
+    property real defaultValue: 0.5
     property real step: 1
 
     width: 130
     editable: true
     from: minimumValue * 100
     to: maximumValue * 100
-    value: startValue * 100
+    value: defaultValue * 100
     stepSize: step * 100
 
     validator: DoubleValidator {
