@@ -44,7 +44,7 @@ RectangleProperties {
 
             minimumValue: 0
             maximumValue: 32
-            step: 10
+            step: 1
             startValue: 0
 
             Layout.fillWidth: true
@@ -74,9 +74,9 @@ RectangleProperties {
         TextSpinBoxProperty {
             nameOption: qsTr("Horizontal offset:")
 
-            minimumValue: -10000
-            maximumValue: 10000
-            step: 100
+            minimumValue: -2000
+            maximumValue: 2000
+            step: 50
             startValue: 0
 
             Layout.fillWidth: true
@@ -90,9 +90,9 @@ RectangleProperties {
         TextSpinBoxProperty {
             nameOption: qsTr("Vertical offset:")
 
-            minimumValue: -10000
-            maximumValue: 10000
-            step: 100
+            minimumValue: -2000
+            maximumValue: 2000
+            step: 50
             startValue: 0
 
             Layout.fillWidth: true

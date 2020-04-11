@@ -11,11 +11,11 @@ RectangleProperties {
         id: layout
         anchors.fill: parent
 
-        TextSpinBoxProperty {
+        TextSliderProperty {
             nameOption: qsTr("Samples:")
             minimumValue: 0
-            maximumValue: 10000
-            step: 100
+            maximumValue: 100
+            step: 5
             startValue: 0
 
             Layout.fillWidth: true
@@ -45,9 +45,9 @@ RectangleProperties {
         TextSpinBoxProperty {
             nameOption: qsTr("Horizontal offset:")
 
-            minimumValue: -10000
-            maximumValue: 10000
-            step: 100
+            minimumValue: -1000
+            maximumValue: 1000
+            step: 50
             startValue: 0
 
             Layout.fillWidth: true
@@ -61,9 +61,9 @@ RectangleProperties {
         TextSpinBoxProperty {
             nameOption: qsTr("Vertical offset:")
 
-            minimumValue: -10000
-            maximumValue: 10000
-            step: 100
+            minimumValue: -1000
+            maximumValue: 1000
+            step: 50
             startValue: 0
 
             Layout.fillWidth: true

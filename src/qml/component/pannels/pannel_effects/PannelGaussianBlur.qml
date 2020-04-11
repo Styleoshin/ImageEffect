@@ -11,12 +11,12 @@ RectangleProperties {
         id: layout
         anchors.fill: parent
 
-        TextSpinBoxProperty {
+        TextSliderProperty {
             nameOption: qsTr("Radius:")
 
             minimumValue: 0
-            maximumValue: 10000
-            step: 100
+            maximumValue: 100
+            step: 5
             startValue: 0
 
             Layout.fillWidth: true
@@ -27,12 +27,12 @@ RectangleProperties {
             Component.onCompleted: SingletonEffects.gsBlurRadius = startValue
         }
 
-        TextSpinBoxProperty {
+        TextSliderProperty {
             nameOption: qsTr("Samples:")
 
             minimumValue: 0
-            maximumValue: 10000
-            step: 100
+            maximumValue: 100
+            step: 5
             startValue: 9
 
             Layout.fillWidth: true
@@ -43,12 +43,12 @@ RectangleProperties {
             Component.onCompleted: SingletonEffects.gsBlurSamples = startValue
         }
 
-        TextSpinBoxProperty {
+        TextSliderProperty {
             nameOption: qsTr("Deviation:")
 
             minimumValue: 0
-            maximumValue: 10000
-            step: 100
+            maximumValue: 100
+            step: 5
             startValue: 0
 
             Layout.fillWidth: true

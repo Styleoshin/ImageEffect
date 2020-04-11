@@ -90,7 +90,7 @@ Rectangle {
                 nameOption: qsTr("Luminance:")
 
                 minimumValue: 0
-                maximumValue: 100
+                maximumValue: 99
                 step: 1
                 startValue: 1
 

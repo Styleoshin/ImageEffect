@@ -27,12 +27,12 @@ RectangleProperties {
             Component.onCompleted: SingletonEffects.directionalAngle = startValue
         }
 
-        TextSpinBoxProperty {
+        TextSliderProperty {
             nameOption: qsTr("Samples:")
 
             minimumValue: 0
-            maximumValue: 10000
-            step: 100
+            maximumValue: 100
+            step: 5
             startValue: 0
 
             Layout.fillWidth: true
@@ -47,8 +47,8 @@ RectangleProperties {
             nameOption: qsTr("Lenght:")
 
             minimumValue: 0
-            maximumValue: 10000
-            step: 100
+            maximumValue: 1000
+            step: 25
             startValue: 0
 
             Layout.fillWidth: true

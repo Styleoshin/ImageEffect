@@ -71,12 +71,12 @@ RectangleProperties {
             Component.onCompleted: SingletonEffects.drShadowSpread = startValue
         }
 
-        TextSpinBoxProperty {
+        TextSliderProperty {
             nameOption: qsTr("Horizontal offset:")
 
-            minimumValue: -10000
-            maximumValue: 10000
-            step: 100
+            minimumValue: -50
+            maximumValue: 50
+            step: 5
             startValue: 0
 
             Layout.fillWidth: true
@@ -87,12 +87,12 @@ RectangleProperties {
             Component.onCompleted: SingletonEffects.drShadowHorizontal = startValue
         }
 
-        TextSpinBoxProperty {
+        TextSliderProperty {
             nameOption: qsTr("Vertical offset:")
 
-            minimumValue: -10000
-            maximumValue: 10000
-            step: 100
+            minimumValue: -50
+            maximumValue: 50
+            step: 5
             startValue: 0
 
             Layout.fillWidth: true
