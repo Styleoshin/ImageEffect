@@ -65,6 +65,7 @@ Rectangle {
                     name: "showHueSaturation"
                     PropertyChanges { target: colorize; clip:true; Layout.preferredHeight:0 }
                     PropertyChanges { target: hueSaturation; clip:false; Layout.preferredHeight:120 }
+                    PropertyChanges { target: rectProperty; height:180 }
                 }
             }
         }
