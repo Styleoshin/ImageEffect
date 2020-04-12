@@ -32,6 +32,12 @@ MenuBar {
 
     Menu {
         title: qsTr("&Edition")
+
+        CheckBox{
+            text: qsTr("Mirror")
+            onCheckStateChanged: SingletonImage.mirror = checked
+        }
+
         Menu {
             cascade: true
             title: qsTr("Fill mode")

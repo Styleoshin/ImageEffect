@@ -8,6 +8,8 @@ Image {
     signal loaded
 
     fillMode: SingletonImage.fillmode
+    mirror: SingletonImage.mirror
+
     source: imageSource
     mipmap: true
     antialiasing: true

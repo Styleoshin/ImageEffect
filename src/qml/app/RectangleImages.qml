@@ -11,8 +11,6 @@ Rectangle {
     MyImage {
         id: imgSource
         source: imageSource
-
-        onLoaded: btnMirror.visible = true
     }
 
     Effects {
@@ -20,22 +18,6 @@ Rectangle {
 
         anchors.fill: imgSource
         imgSource: imgSource
-    }
-
-    Button {
-        id: btnMirror
-
-        width: 30
-        height: 30
-        text: qsTr("M")
-        visible: false
-
-        anchors {
-            horizontalCenter: imgSource.horizontalCenter
-            bottom: imgSource.top
-        }
-
-        onClicked: imgSource.mirror = (imgSource.mirror)? false:true
     }
 
     function saveImage(path) {
