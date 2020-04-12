@@ -12,6 +12,7 @@ QtObject {
 
     /* Color */
     // Colorize
+    property bool colorizeEnableEffect: false
     property real colorizeHue: 0
     property real colorizeSaturation: 0
     property real colorizeLightness: 0

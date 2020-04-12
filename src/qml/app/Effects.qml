@@ -49,21 +49,21 @@ Item
     }
 
      // Color
-   /* Colorize {
+    Colorize {
         id: colorize
 
-        source: colorOverlay
+        source:  (SingletonEffects.colorizeEnableEffect) ? colorOverlay : desaturate
         anchors.fill: element
 
         hue: SingletonEffects.colorizeHue
         saturation: SingletonEffects.colorizeSaturation
         lightness: SingletonEffects.colorizeLightness
         cached: true
-    }*/
+    }
     HueSaturation {
         id: hueSaturation
 
-        source: colorOverlay
+        source: (SingletonEffects.colorizeEnableEffect) ? colorize : colorOverlay
         anchors.fill: element
 
         hue: SingletonEffects.hueSatHue
