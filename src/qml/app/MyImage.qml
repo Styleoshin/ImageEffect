@@ -1,11 +1,13 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.14
+import "../Singleton"
 
 Image {
     id: imgSource
 
     signal loaded
 
+    fillMode: SingletonImage.fillmode
     source: imageSource
     mipmap: true
     antialiasing: true

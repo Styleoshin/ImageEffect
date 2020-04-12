@@ -1,1 +1,2 @@
 singleton SingletonEffects 1.0 SingletonEffects.qml
+singleton SingletonImage 1.0 SingletonImage.qml

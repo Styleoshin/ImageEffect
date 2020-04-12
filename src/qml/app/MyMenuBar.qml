@@ -34,35 +34,36 @@ MenuBar {
         title: qsTr("&Edition")
         Menu {
             cascade: true
-            title: qsTr("&Fill mode")
+            title: qsTr("Fill mode")
 
-            Action {
-                text: qsTr("&Stretch")
-                onTriggered: SingletonImage.fillmode = Image.Stretch
+            RadioButton {
+                text: qsTr("Stretch")
+                onClicked : SingletonImage.fillmode = Image.Stretch
             }
-            Action {
-                text: qsTr("&Preserve aspect fit")
-                onTriggered: SingletonImage.fillmode = Image.PreserveAspectFit
+            RadioButton {
+                text: qsTr("Preserve aspect fit")
+                checked: true
+                onClicked: SingletonImage.fillmode = Image.PreserveAspectFit
             }
-            Action {
-                text: qsTr("&Preserve aspect crop")
-                onTriggered: SingletonImage.fillmode = Image.PreserveAspectCrop
+            RadioButton {
+                text: qsTr("Preserve aspect crop")
+                onClicked: SingletonImage.fillmode = Image.PreserveAspectCrop
             }
-            Action {
-                text: qsTr("&Tile")
-                onTriggered: SingletonImage.fillmode = Image.Tile
+            RadioButton {
+                text: qsTr("Tile")
+                onClicked: SingletonImage.fillmode = Image.Tile
             }
-            Action {
-                text: qsTr("&Tile vertically")
-                onTriggered: SingletonImage.fillmode = Image.TileVertically
+            RadioButton {
+                text: qsTr("Tile vertically")
+                onClicked: SingletonImage.fillmode = Image.TileVertically
             }
-            Action {
-                text: qsTr("&Tile horizontally")
-                onTriggered: SingletonImage.fillmode = Image.TileHorizontally
+            RadioButton {
+                text: qsTr("Tile horizontally")
+                onClicked: SingletonImage.fillmode = Image.TileHorizontally
             }
-            Action {
-                text: qsTr("&Pad")
-                onTriggered: SingletonImage.fillmode = Image.Pad
+            RadioButton {
+                text: qsTr("Pad")
+                onClicked: SingletonImage.fillmode = Image.Pad
             }
         }
     }

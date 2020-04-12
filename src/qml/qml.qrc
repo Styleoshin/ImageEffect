@@ -36,5 +36,6 @@
         <file>app/Effects.qml</file>
         <file>Singleton/qmldir</file>
         <file>Singleton/SingletonEffects.qml</file>
+        <file>Singleton/SingletonImage.qml</file>
     </qresource>
 </RCC>
