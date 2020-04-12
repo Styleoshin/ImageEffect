@@ -28,7 +28,7 @@ Rectangle {
 
     RectangleProperties {
         id : rectProperty
-        implicitHeight: 180
+        implicitHeight: 220
 
         anchors {
             top: rectTitle.bottom
@@ -53,7 +53,7 @@ Rectangle {
 
             PannelColorize {
                 id: colorize
-                Layout.preferredHeight: 120
+                Layout.preferredHeight: 160
             }
 
             PannelHueSaturation {

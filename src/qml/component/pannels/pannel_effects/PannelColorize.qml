@@ -10,6 +10,19 @@ RectangleProperties {
         id: layout
         anchors.fill: parent
 
+
+        TextCheckboxProperty {
+            nameOption: qsTr("Enable:")
+            checkStateDefault: false
+
+            Layout.fillWidth: true
+            Layout.leftMargin: 10
+            Layout.rightMargin: 10
+
+            onCheckStateChanged: SingletonEffects.colorizeEnableEffect = checkState
+            Component.onCompleted: SingletonEffects.colorizeEnableEffect = checkStateDefault
+        }
+
         TextSlidercolorProperty {
             nameOption: qsTr("Hue:")
 
