@@ -1,5 +1,7 @@
+import QtQuick 2.14
 import QtQuick.Controls 2.14
 import QtQuick.Dialogs 1.2
+import "../Singleton"
 
 MenuBar {
     id: menuBar
@@ -27,6 +29,44 @@ MenuBar {
             onTriggered: Qt.quit()
         }
     }
+
+    Menu {
+        title: qsTr("&Edition")
+        Menu {
+            cascade: true
+            title: qsTr("&Fill mode")
+
+            Action {
+                text: qsTr("&Stretch")
+                onTriggered: SingletonImage.fillmode = Image.Stretch
+            }
+            Action {
+                text: qsTr("&Preserve aspect fit")
+                onTriggered: SingletonImage.fillmode = Image.PreserveAspectFit
+            }
+            Action {
+                text: qsTr("&Preserve aspect crop")
+                onTriggered: SingletonImage.fillmode = Image.PreserveAspectCrop
+            }
+            Action {
+                text: qsTr("&Tile")
+                onTriggered: SingletonImage.fillmode = Image.Tile
+            }
+            Action {
+                text: qsTr("&Tile vertically")
+                onTriggered: SingletonImage.fillmode = Image.TileVertically
+            }
+            Action {
+                text: qsTr("&Tile horizontally")
+                onTriggered: SingletonImage.fillmode = Image.TileHorizontally
+            }
+            Action {
+                text: qsTr("&Pad")
+                onTriggered: SingletonImage.fillmode = Image.Pad
+            }
+        }
+    }
+
     Menu {
         title: qsTr("&Help")
         Action { text: qsTr("&About") }
