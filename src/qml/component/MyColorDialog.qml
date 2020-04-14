@@ -22,16 +22,17 @@ Dialog {
             id: colorPicker
 
             property color hueColor : hsba(hueSlider.value, 1.0, 1.0, 1.0)
-            property real saturation : pickerCursor.x/width
-            property real brightness : 1 - pickerCursor.y/height
+            property real saturation : pickerCursor.x / width
+            property real brightness : 1 - pickerCursor.y / height
 
             Layout.alignment: Qt.AlignHCenter
             Layout.preferredWidth: 160
             Layout.preferredHeight: 160
 
             Rectangle {
-                anchors.fill: colorPicker
                 rotation: -90
+                anchors.fill: colorPicker
+
                 gradient: Gradient {
                     GradientStop { position: 0.0; color: "#FFFFFF" }
                     GradientStop { position: 1.0; color: colorPicker.hueColor }
@@ -40,6 +41,7 @@ Dialog {
 
             Rectangle {
                 anchors.fill: colorPicker
+
                 gradient: Gradient {
                     GradientStop { position: 1.0; color: "#FF000000" }
                     GradientStop { position: 0.0; color: "#00000000" }
@@ -52,16 +54,18 @@ Dialog {
 
                 Rectangle {
                     x: -parent.r; y: -parent.r
-                    width: parent.r*2; height: parent.r*2
+                    height: parent.r*2; width: parent.r*2
                     radius: parent.r
                     border.color: "black"; border.width: 2
                     color: "transparent"
 
                     Rectangle {
-                        anchors.fill: parent; anchors.margins: 2;
                         border.color: "white"; border.width: 2
                         radius: width/2
                         color: "transparent"
+
+                        anchors.fill: parent;
+                        anchors.margins: 2;
                     }
                 }
             }
@@ -96,8 +100,7 @@ Dialog {
             }
 
             background: Rectangle {
-                width: parent.height
-                height: parent.width
+                height: parent.width; width: parent.height
 
                 rotation: 90
                 radius: 4

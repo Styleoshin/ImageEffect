@@ -26,6 +26,7 @@ Item {
 
         MouseArea {
             anchors.fill: parent
+
             onDoubleClicked: {
                 sb1.value = element.defaultValue.x * 100
                 sb2.value = element.defaultValue.y * 100

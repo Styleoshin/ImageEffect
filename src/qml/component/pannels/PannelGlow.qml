@@ -16,8 +16,7 @@ Rectangle {
     PannelTitle {
         id: rectTitle
 
-        width: parent.width
-        height: 35
+        height: 35; width: parent.width
         title: qsTr("Glow")
 
         anchors.top: parent.top

@@ -24,6 +24,7 @@ Rectangle {
 
     Effects {
         id: effects
+
         anchors.fill: imgSource
         imgSource: imgSource
     }

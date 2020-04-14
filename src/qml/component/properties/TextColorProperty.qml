@@ -25,6 +25,7 @@ Item {
 
         MouseArea {
             anchors.fill: parent
+
             onDoubleClicked: {
                 colorDialog.resetDefault()
                 element.color = element.colorDefault
@@ -33,8 +34,7 @@ Item {
     }
 
     Rectangle {
-        width: 27
-        height: 18
+        height: 18; width: 27
         color: "#d4ffec"
         radius: 5
         gradient: Gradient {

@@ -28,6 +28,7 @@ Item {
 
         MouseArea {
             anchors.fill: parent
+
             onDoubleClicked:
             {
                 spinBox.value = element.defaultValue * 100

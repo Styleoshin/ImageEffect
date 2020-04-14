@@ -8,7 +8,7 @@ Dialog {
     id: dlDial
 
     title: qsTr("Change scale:")
-    height: 120; width: 240;
+    height: 120; width: 240
 
     contentItem: RowLayout {
         spacing: 1

@@ -5,11 +5,10 @@ import "app"
 
 ApplicationWindow {
     id: applicationWindow
-    visibility: Qt.WindowFullScreen // << the solution
-    visible: true
-    width: 1027
-    height: 768
+    height: 768;  width: 1027
     title: qsTr("Image Effect")
+    visibility: Qt.WindowFullScreen
+    visible: true
 
     menuBar: MyMenuBar{
         id: menuBar
@@ -37,9 +36,7 @@ ApplicationWindow {
 
     PannelEffect {
         id :pannelEffect
-
-        width: 430
-        height: parent.height - 20
+        height: parent.height - 20; width: 430
 
         anchors {
             top: menuBar.bottom

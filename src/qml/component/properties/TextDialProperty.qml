@@ -27,6 +27,7 @@ Item {
 
         MouseArea {
             anchors.fill: parent
+
             onDoubleClicked: {
                 spinBox.value = element.defaultValue * 100
                 element.value = element.defaultValue
@@ -37,8 +38,7 @@ Item {
     Rectangle {
         id: rectDial
 
-        width: 22
-        height: 22
+        height: 22; width: 22
         color: "#43e97b"
         radius: 11
         border.width: 1

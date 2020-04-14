@@ -15,9 +15,7 @@ Image {
     antialiasing: true
     smooth: true
 
-    anchors {
-        centerIn: parent
-    }
+    anchors.centerIn: parent
 
     onStatusChanged:
         switch(status) {

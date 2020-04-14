@@ -10,9 +10,9 @@ ScrollView {
 
     ColumnLayout {
         id: columnLayout
+        spacing: 15
 
         anchors.fill: parent
-        spacing: 15
 
         PannelGeneral { id: general }
         PannelColor { id: color }

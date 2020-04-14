@@ -27,6 +27,7 @@ Item {
 
         MouseArea {
             anchors.fill: parent
+
             onDoubleClicked:
             {
                 spinBox.value = element.defaultValue * 100
@@ -38,8 +39,7 @@ Item {
     Slider {
         id: slider
 
-        width: 140
-        height: 20
+        height: 20; width: 140
         from: element.minimumValue
         to: element.maximumValue
         value: element.defaultValue
