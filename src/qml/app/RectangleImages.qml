@@ -29,8 +29,8 @@ Rectangle {
     }
 
     function saveImage(path) {
-        effects.grabToImage(function(image) {
-            image.saveToFile(path);
-        });
+        grabToImage(function(image) {
+             image.saveToFile(path);
+        }, Qt.size(1920, 1080));
     }
 }
