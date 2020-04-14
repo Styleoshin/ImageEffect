@@ -37,5 +37,6 @@
         <file>Singleton/qmldir</file>
         <file>Singleton/SingletonEffects.qml</file>
         <file>Singleton/SingletonImage.qml</file>
+        <file>app/DialogScale.qml</file>
     </qresource>
 </RCC>
