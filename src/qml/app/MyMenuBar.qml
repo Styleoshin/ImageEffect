@@ -72,6 +72,11 @@ MenuBar {
                 onClicked: SingletonImage.fillmode = Image.Pad
             }
         }
+
+        Action {
+            text: qsTr("&Scale")
+            onTriggered: dialogScale.open()
+        }
     }
 
     Menu {
@@ -100,5 +105,10 @@ MenuBar {
         onAccepted: {
             saveImage(fileDialogSave.fileUrl.toString().replace(/^(file:\/{3})/,""))
         }
+    }
+
+    DialogScale {
+        id : dialogScale
+        anchors.centerIn: parent
     }
 }
