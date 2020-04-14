@@ -15,11 +15,6 @@ Image {
     antialiasing: true
     smooth: true
 
-    sourceSize {
-        height: 1024
-        width: 1024
-    }
-
     anchors {
         centerIn: parent
     }
