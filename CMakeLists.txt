@@ -25,21 +25,22 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 #endif()
 
 find_package(Qt5 COMPONENTS Core Quick LinguistTools REQUIRED)
+find_package(Qt5QuickCompiler)
+
+qtquick_compiler_add_resources(RESOURCES ressources.qrc ${CMAKE_CURRENT_LIST_DIR}/src/qml/qml.qrc)
 
 #set(TS_FILES ImageEffect_fr_FR.ts)
 
 if(ANDROID)
     add_library(ImageEffect SHARED
       ${CMAKE_CURRENT_LIST_DIR}/src/main.cpp
-      ${CMAKE_CURRENT_LIST_DIR}/src/qml/qml.qrc
-      ressources.qrc
+      ${RESOURCES}
       ${TS_FILES}
     )
 else()
     add_executable(ImageEffect
       ${CMAKE_CURRENT_LIST_DIR}/src/main.cpp
-      ${CMAKE_CURRENT_LIST_DIR}/src/qml/qml.qrc
-      ressources.qrc
+      ${RESOURCES}
       ${TS_FILES}
     )
 endif()
